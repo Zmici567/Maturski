@@ -1,0 +1,107 @@
+.x{
+    fill: #FBF4E9;
+}
+.odeljenje{
+    display: block;
+    width: 100%;
+    padding: 20px;
+}
+.odelj{
+    margin-top: 70px;
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: #6ECB63;
+    background-color: #ec9cd358;
+    padding: 10px;
+    border-radius: 20px;
+}
+.text{
+  color: #EC9CD3;
+}
+.odelj h4{
+  border-bottom:2px solid #EC9CD3 ;
+  padding: 10px;
+  display:flex;
+}
+.div-ucenici{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.ucenici{
+    height: 600px;
+    width: 700px;
+    background-color:black;
+
+}
+.dugmici{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.dodaj-ucenika{
+display: none;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
+width: 50%;
+position: fixed;
+background-color:#6ECB63;
+border-radius: 20px;
+}
+
+
+
+
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 17px 0 1em 0;
+    width: 300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px #EC9CD3 solid;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color:#6ECB63;
+  }
+  
+  .inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #FBF4E9;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: #6ECB63;
+  }

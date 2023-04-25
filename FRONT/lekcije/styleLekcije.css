@@ -8,6 +8,7 @@
     margin-bottom: 30px;
     display: flex;
 }
+
 .levo{
     margin-right: 32%;
     margin-left: auto;
@@ -15,12 +16,23 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+.levo:hover{
+    border-top: 4px solid #e77cc5;
+    border-radius: 4px solid #e77cc5;
+    border-bottom: 4px solid #e77cc5;
+}
 .desno{
     margin-left: 32%;
     margin-right: auto;
     background-color: #b0eca1;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+.desno:hover{
+    border-top: 4px solid #87a87e;
+    border-left: 4px solid #87a87e;
+    border-bottom: 4px solid #87a87e;
 }
 
 .post-kartica{
@@ -35,10 +47,18 @@
 
 .naslov-kartice{
  width: 100%;
- padding: 20px;
+ padding: 20px 20px 10px 20px;
 }
 .naslov{
     height: 85%;
+}
+.naslov p{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: flex-end;
+    color: #FBF4E9;
+
 }
 .autor-kartice{
     display: flex;
@@ -47,6 +67,62 @@
     justify-content: flex-end;
     color: #FBF4E9;
 }
+
+.cta {
+    border: none;
+    background: none;
+    margin-top: 10px;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 18px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: #FBF4E9;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FBF4E9;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.strelica{
+    fill: #FBF4E9;
+}
+
+
 
 @media (max-width: 1000px) {
     .levo{
@@ -92,3 +168,7 @@
     }
     
 }
+
+
+
+
