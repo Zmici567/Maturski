@@ -22,28 +22,31 @@
     <br>
     <a href="../index.html" class="dugmenazad"> <img src="../slike/back (1).png" class="nav-slika" style="height: 20px;" /> NAZAD</a><br><br>
     <div class="log"> <br>
-      <h1>PRIJAVI SE!</h1> <br><br><br>
-    <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
-        <label for="name">Email</label>
-    </div>
+        <h1>PRIJAVI SE!</h1> <br><br><br>
+        <div class="inputGroup">
+            <input type="text" required="" autocomplete="off" id="cirko">
+            <label for="name">Email/Ime i Prezime</label>
+        </div>
 
-    <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
-        <label for="name">Šifra</label>
-    </div>
-<br>
-<div class="prijavise">
-    <p>PRIJAVI SE</p>
-</div>
+        <div class="inputGroup">
+            <input type="password" required="" autocomplete="off" id = "sojic">
+            <label for="name">Šifra</label>
+        </div>
+        <br>
+        <label id="tika spic"></label>
+        <br>
+        <div class="prijavise"  onclick="prijaviSE()">
+            <p>PRIJAVI SE</p>
+        </div>
 
-<div class="reg">
-    <a href="../reg/reg.html">
-    <div class="linija"></div> Kreirajte novi nalog <div class="linija"></div> 
-</a>
-</div>
+        <div class="reg">
+            <a href="../reg/reg.html">
+                <div class="linija"></div> Kreirajte novi nalog <div class="linija"></div> 
+            </a>
+        </div>
     </div>
    </div>
- 
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="./log.js"></script>
 </body>
 </html>
