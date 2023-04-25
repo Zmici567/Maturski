@@ -16,9 +16,12 @@ app.listen(PORT, function (){
     console.log("Server slusa na portu: "+PORT);
 })
 
+app.use(ex.static("../FRONT/"));
+
 baza();
 
 app.get("/api/users",user.getUsers);
 app.post("/api/Ucenik", user.postUcenik);
 app.post("/api/Profesor", user.postProfesor);
 app.delete("/api/users/:id",user.delete);
+app.post("/api/login",user.login);

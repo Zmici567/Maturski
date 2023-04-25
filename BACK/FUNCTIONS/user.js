@@ -86,9 +86,48 @@ async function del(req,res)
     }
 }
 
+async function login(req,res)
+{
+    try
+    {
+        let email = req.body.email;
+        let password = req.body.password;
+        let users = await USER.find();
+        console.log(users.length);
+        let t=false;
+        for(let i=0;i<users.length;i++)
+        {
+            if(users[i].password===password && (users[i].email===email || users[i].imeIprezime===email))
+            {
+                res.json({
+                    uspesnost:true,
+                    id:users[i]._id
+                })
+                t=true;
+                break;
+            }
+        }
+        if(!t)
+        {
+            res.json({
+                uspesnost:false,
+                message:"404 not found"
+            })
+        }
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            message:err.message
+        })
+    }
+}
+
 module.exports = (new Object({
     postUcenik:postUcenik,
     getUsers:getUsers,
     postProfesor:postProfesor,
-    delete:del
+    delete:del,
+    login:login
 }))
