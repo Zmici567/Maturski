@@ -1,19 +1,39 @@
 
+.dugmenazad{
+  background-color: #6ECB63;
+  color: #FBF4E9;
+  margin-top: 40px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px ;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.dugmenazad:hover{
+  text-decoration: none;
+  background-color: #4a8744;
+  color: #FBF4E9;
+}
 .pozadina{
   position: fixed;
   width: 100%;
   z-index: -100;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   }
   .pozadina img{
-      width: 100%;
-  }
+      height: 100%;
+  }  
 .odeljenje{
     display: block;
     width: 100%;
     padding: 20px;
 }
 .odelj{
-    margin-top: 70px;
+    margin-top: 20px;
     justify-content: flex-start;
     display: flex;
     width: 100%;
@@ -302,12 +322,9 @@ margin-bottom: 20px;
 
   @media (max-width: 900px){
     .div-ucenici{
-      display: block;
+      display:block ;
     }
-    .div-edit
-    {
-      display: block;
-    }
+  
     .ucenici{
       margin-left: auto;
       margin-right: auto;
@@ -332,6 +349,9 @@ margin-bottom: 20px;
     }
     .dodaj-ucenika{
       width: 80%;
+    }
+    .dugmenazad{
+      margin-top: 10px;
     }
   }
 
