@@ -1,11 +1,20 @@
 .pozadina{
-    background: url("../slike/poz.jpg") center center;
     width: 100%;
     height: 750px;
     background-size: cover;
     position: relative;
     padding: 0;
 }
+
+.pozadinaa{
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+    }
+    .pozadinaa img{
+        width: 100%;
+    }
+
 
 .dugmenazad{
     background-color: #6ECB63;

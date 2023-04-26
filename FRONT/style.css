@@ -172,3 +172,43 @@ body{
     }
   }
 
+
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+
+#footer{
+  bottom: 0;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+.footer{
+  background-color: #6ECB63;
+  width: 100%;
+  padding: 40px 5% 40px 5%;
+  text-align: center;
+  margin: 0;
+}
+
+.footer h1{
+  color: #FBF4E9;
+}
+
+.kontakt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.kon{
+    margin: 10px;
+}
+
+.kon:hover{
+    background-color:#FBF4E9 ;
+    border-radius:500% ;
+    padding: 5px;
+}

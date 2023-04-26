@@ -1,6 +1,12 @@
-.x{
-    fill: #FBF4E9;
-}
+
+.pozadina{
+  position: fixed;
+  width: 100%;
+  z-index: -100;
+  }
+  .pozadina img{
+      width: 100%;
+  }
 .odeljenje{
     display: block;
     width: 100%;
@@ -14,17 +20,53 @@
     flex-direction: column;
     margin-bottom: 20px;
     color: #6ECB63;
-    background-color: #ec9cd358;
+    background-color: #fbf4e9d2;
     padding: 10px;
     border-radius: 20px;
 }
+.text2{
+  display: flex;
+}
+
+.slika-edit{
+  width: 60px;
+  margin-right: 25px;
+  fill: #d151a8;
+  padding: 0 10px 0 10px;
+  margin-top: 2px;
+  border-radius: 5px;
+}
+.slika-edit:hover{
+  background-color: #b0eca162;
+  border: 2px solid #6ECB63;
+}
+
 .text{
   color: #EC9CD3;
+  display: flex;
+  width: 100%;
 }
-.odelj h4{
-  border-bottom:2px solid #EC9CD3 ;
+#text-h{
+  color: #EC9CD3;
+
+}
+.text h4{
   padding: 10px;
-  display:flex;
+  padding-bottom: 20px;
+  color: #6ECB63;
+  margin-bottom: 0;
+}
+.text h2{
+  padding: 10px;
+  color: #6ECB63;
+  margin-bottom: 0;
+}
+.linija {
+  width: 100%;
+  color: #EC9CD3;
+  background-color: #EC9CD3;
+  height: 2px;
+  margin:0;
 }
 .div-ucenici{
     width: 100%;
@@ -32,34 +74,185 @@
     flex-direction: row-reverse;
 }
 .ucenici{
-    height: 600px;
-    width: 700px;
-    background-color:black;
-
+    width: 60%;
+    background-color:#b0eca190;
+    border: 3px solid #6ECB63;
+    border-radius: 20px;
+    padding: 10px;
+}
+.ucenik{
+   width: 95%;
+   height: 45px;
+   border-radius: 10px;
+   color:#d151a8;
+   background-color: #FBF4E9;
+   border: 2px solid #6ECB63;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 5px 10px 5px 10px;
+   display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 22px;
+}
+.ikonice{
+  display: flex;
+}
+.brisi{
+  margin-right: 10px;
+}
+.brisi:hover{
+  border: 1px solid #6ECB63;
+  background-color: #b0eca162;
+  padding: 2px;
+  border-radius: 10%;
+}
+.ucenik:hover{
+  border: 3px solid #6ECB63;
+}
+.ucenici p{
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
 }
 .dugmici{
     display: flex;
     width: 40%;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
 }
 
+.dodaj{
+  border-radius: 5px;
+  border: 2px solid #d151a8;
+  background-color: #EC9CD3;
+  color: #FBF4E9;
+  margin: 10px;
+  font-size: 35px;
+  display: flex;
+  align-items: center
+}
 
+.slika-dugme{
+  width: 35px;
+  fill: #FBF4E9;
+  margin-left: 10px;
+}
+
+.dodaj p, .rang p{
+  margin-bottom: 5px;
+}
+
+.dodaj:hover{
+  background-color: #d151a8;
+  border: 4px solid #d151a8;
+}
+
+.rang{
+  border-radius: 5px;
+  border: 2px solid #76e55b;
+  background-color:#b0eca1;
+  color: #FBF4E9;
+  margin: 10px;
+  font-size: 35px;
+  display: flex;
+  align-items: center
+}
+.rang:hover{
+  background-color: #76e55b;
+  border: 4px solid #76e55b;
+}
+
+.div-edit{
+  display: none;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 150px;
+width: 50%;
+position: fixed;
+background-color:#6ECB63;
+border-radius: 20px;
+background: url("../slike/poz.jpg") top right;
+}
 
 .dodaj-ucenika{
 display: none;
 justify-content: center;
 flex-direction: column;
 align-items: center;
+text-align: center;
 margin-left: auto;
 margin-right: auto;
-margin-top: 100px;
+margin-top: 140px;
 width: 50%;
 position: fixed;
 background-color:#6ECB63;
 border-radius: 20px;
+background: url("../slike/poz.jpg") top right;
+}
+.x{
+  display: flex;
+  justify-content: flex-end;
+  height: 65px;
+  width: 100%;
+  padding: 10px 10px 0 0;
+  margin-bottom: 5px;
+}
+.x-img img{
+  border-radius: 50%;
+  height: 55px;
+
+}
+.x-img:hover img{
+  background-color: #ec9cd36b;
+  border: 3px solid #ec9cd36b;
+  border-radius: 50%;
 }
 
+.div-dodaj{
+  background-color: #FBF4E9;
+  box-shadow: 1px 1px 25px #000000;
+  color: #6ECB63;
+  justify-content: center;
+flex-direction: column;
+align-items: center;
+text-align: center;
+display: flex;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+padding-top: 15px;
+border-radius: 20px;
+margin-bottom: 20px;
+}
+
+.dodaj-u{
+  padding: 10px;
+  background-color: #b0eca154;
+  color: #FBF4E9;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 2px solid #6ECB63;
+  color: #6ECB63;
+}
+.dodaj-u p{
+  margin-bottom: 0;
+
+}
+
+.dodaj-u:hover{
+  color:  #FBF4E9;
+  background-color: #6ECB63;
+}
 
 
 
@@ -104,4 +297,56 @@ border-radius: 20px;
   
   .inputGroup :is(input:focus, input:valid) {
     border-color: #6ECB63;
+  }
+
+
+  @media (max-width: 900px){
+    .div-ucenici{
+      display: block;
+    }
+    .div-edit
+    {
+      display: block;
+    }
+    .ucenici{
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+    }
+    .dugmici{
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+    .rang{
+      font-size: 25px;
+    }
+    .dodaj{
+      font-size: 25px;
+    }
+    .slika-edit{
+      margin-right: 0;
+    }
+    .odeljenje{
+      padding: 10px;
+    }
+    .dodaj-ucenika{
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 500px){
+    .dodaj-ucenika{
+      width: 100%;
+    }
+    .div-edit{
+      width: 100%;
+    }
+    .div-dodaj{
+      width: 90%;
+    }
+    .ucenici{
+      width: 100%;
+    }
+
   }
