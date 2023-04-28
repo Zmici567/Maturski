@@ -1,0 +1,156 @@
+.pozadina{
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+}
+
+.pozadinaa{
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    }
+    .pozadinaa img{
+        height: 100%;
+    }  
+
+.dugmenazad{
+    background-color: #6ECB63;
+    color: #FBF4E9;
+    margin: 40px;
+    margin-left: 50px;
+    padding: 10px;
+    border-radius: 5px ;
+    font-size: 20px;
+}
+.dugmenazad:hover{
+    text-decoration: none;
+    background-color: #4a8744;
+    color: #FBF4E9;
+}
+
+.log{
+    width: 70%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: #FBF4E9;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    border: 1px solid #6ECB63;
+    box-shadow: 1px 1px 25px #000000;
+    color: #6ECB63;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.log h2{
+   text-align: left;
+   margin-left: 10%;
+   margin-top: 20px;
+   color: #EC9CD3;
+}
+
+.lekcija{
+    width: 80%;
+    border-left:3px solid #EC9CD3;
+    border-right:3px solid #EC9CD3;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #51bf47;
+}
+
+
+
+.pokreni-test{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+    color: #EC9CD3;
+    margin-bottom: 20px;
+}
+
+.cta {
+    border: none;
+    background: none;
+    margin-top: 10px;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 16px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: #EC9CD3;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #EC9CD3;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.strelica{
+    fill: #EC9CD3;
+}
+
+
+ @media (max-width:900px) {
+    .log{
+        margin-left: auto;
+    }
+}
+
+@media (max-width:600px)
+{ 
+   .log{
+      width: 90%;
+   }
+   .inputGroup{
+    width: 90%;
+   }
+
+}
+

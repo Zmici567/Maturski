@@ -78,7 +78,6 @@
     width: 100%;
     justify-content: flex-end;
     color: #FBF4E9;
-
 }
 .autor-kartice{
     display: flex;
@@ -97,7 +96,7 @@
   .cta span {
     padding-bottom: 7px;
     letter-spacing: 4px;
-    font-size: 18px;
+    font-size: 16px;
     padding-right: 15px;
     text-transform: uppercase;
   }
@@ -158,6 +157,11 @@
     body{
         display: block;
     }
+    .dodaj-lekciju{
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 @media (max-width:700px){
@@ -185,6 +189,9 @@
     }
     .autor-kartice{
         padding: 0;
+    }
+    .naslov p{
+        justify-content: center;
     }
     
 }

@@ -1,0 +1,187 @@
+.pozadina{
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+
+
+}
+
+.pozadinaa{
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    }
+    .pozadinaa img{
+        height: 100%;
+    }  
+
+.dugmenazad{
+    background-color: #6ECB63;
+    color: #FBF4E9;
+    margin: 40px;
+    margin-left: 50px;
+    padding: 10px;
+    border-radius: 5px ;
+    font-size: 20px;
+}
+.dugmenazad:hover{
+    text-decoration: none;
+    background-color: #4a8744;
+    color: #FBF4E9;
+}
+
+.log{
+    width: 70%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+    background-color: #FBF4E9;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    border: 1px solid #6ECB63;
+    box-shadow: 1px 1px 25px #000000;
+    color: #6ECB63;
+    padding-top: 20px; 
+
+}
+
+.linija {
+    width: 100%;
+    color: #EC9CD3;
+    background-color: #EC9CD3;
+    height: 2px;
+    margin:0;
+    margin-bottom: 25px;
+  }
+.odgovori{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #b0eca181;
+    border-radius: 20px;
+    display: block;
+    padding-left: 10%;
+    padding-right:10% ;
+    box-shadow: 1px 1px 18px #EC9CD3;
+}
+.odgovor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FBF4E9;
+    border: 2px solid #EC9CD3;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #EC9CD3;
+    padding-left:10px ;
+    padding-right: 10px;
+}
+
+.odgovor:hover{
+    background-color: #ec9cd348;
+}
+
+.odgovor h3{
+    margin-right: 10px;
+}
+.kraj-testa{
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 50%;
+    position: fixed;
+    background-color:#6ECB63;
+    border-radius: 20px;
+    background: url("../slike/poz.jpg") top right;
+    box-shadow: 1px 1px 25px #000000;
+    }
+.bodovi{
+    display: flex;
+    justify-content: center;
+}
+.bodovii{
+    color: #EC9CD3;
+    margin-left: 10px;
+}
+.x{
+    display: flex;
+    justify-content: flex-end;
+    height: 65px;
+    width: 100%;
+    padding: 10px 10px 0 0;
+    margin-bottom: 5px;
+  }
+  .x-img img{
+    border-radius: 50%;
+    height: 55px;
+  
+  }
+  .x-img:hover img{
+    background-color: #ec9cd36b;
+    border: 3px solid #ec9cd36b;
+    border-radius: 50%;
+  }
+
+  .kraj{
+    background-color: #FBF4E9;
+    box-shadow: 1px 1px 25px #000000;
+    color: #6ECB63;
+    justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  }
+
+  
+
+
+ @media (max-width:900px) {
+    .log{
+        margin-left: auto;
+    }
+}
+
+@media (max-width:600px)
+{ 
+   .log{
+      width: 90%;
+      margin-top: 40px;
+   }
+
+   .odgovor h4{
+    font-size: 16px;
+   }
+   .odgovor h3{
+    font-size: 20px;
+   }
+
+   .log h3{
+    font-size: 25px;
+   }
+
+}
+

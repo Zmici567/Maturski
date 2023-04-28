@@ -1,0 +1,269 @@
+.pozadina{
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+}
+
+.pozadinaa{
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    }
+    .pozadinaa img{
+        height: 100%;
+    }  
+
+.dugmenazad{
+    background-color: #6ECB63;
+    color: #FBF4E9;
+    margin: 40px;
+    margin-left: 50px;
+    padding: 10px;
+    border-radius: 5px ;
+    font-size: 20px;
+}
+.dugmenazad:hover{
+    text-decoration: none;
+    background-color: #4a8744;
+    color: #FBF4E9;
+}
+
+.log{
+    width: 70%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: #FBF4E9;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    border: 1px solid #6ECB63;
+    box-shadow: 1px 1px 25px #000000;
+    color: #6ECB63;
+    padding-top: 20px;
+}
+
+.log h2{
+   text-align: left;
+   margin-left: 10%;
+   margin-top: 20px;
+   color: #EC9CD3;
+}
+.label{
+    text-align: left;
+    margin-left: 12%;
+    margin-bottom: 3px;
+    color: #EC9CD3;
+    }
+    
+
+.postavi{
+    padding: 10px;
+    background-color: #b0eca154;
+    color: #FBF4E9;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top: 60px;
+    border: 2px solid #6ECB63;
+    color: #6ECB63;
+}
+.postavi p{
+margin-bottom: 0px;
+}
+.postavi:hover{
+    background-color: #6ECB63;
+    color:  #FBF4E9;
+}
+
+.box{
+    width: 80%;
+    height:40px;
+    font-size: 20px;
+    color:#EC9CD3;
+    border: 3px solid #6ECB63;
+    border-radius: 15px;
+    background: #abe8a448;
+}
+.box2{
+    width: 80%;
+    height:100px;
+    font-size: 15px;
+    color:#EC9CD3;
+    border: 3px solid #6ECB63;
+    border-radius: 15px;
+    background: #abe8a448;
+}
+.pitanja{
+    background-color: #abe8a448;
+    border-radius: 25px;
+}
+.pitanje{
+    display: block;
+
+}
+
+.odgovor{
+    display: flex;
+    align-items: center;
+}
+
+.box-odg{
+    display: block;
+    width: 100%;
+}
+.box4{
+    width: 80%;
+    height:40px;
+    font-size: 20px;
+    color:#EC9CD3;
+    border: 3px solid #6ECB63;
+    border-radius: 15px;
+    background: #ec9cd33e;
+}
+.box3{
+    width: 80%;
+    height:40px;
+    font-size: 20px;
+    color:#EC9CD3;
+    border: 3px solid #6ECB63;
+    border-radius: 15px;
+    background: #FBF4E9;
+    margin-right: 10%;
+    background: #ec9cd33e;
+}
+
+.tacno{
+    width: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0;
+    margin-left: 10%;
+    margin-top: 15px;
+}
+
+.plus{
+    width: 40px;
+    margin-top: 0;
+    margin-right: 5px;
+}
+
+.dodaj-pitanje{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   padding: 5px;
+}
+.dodaj-p{
+    color: #EC9CD3;
+    font-size: 20px;
+    margin-bottom: 0;
+   
+}
+
+.dodaj-pitanje:hover{
+    background-color: #6dcb6373;
+     margin-left: 20%;
+     margin-right: 20%;
+     border-radius: 20px;
+    
+}
+/* Variation of work by @mrhyddenn for Radios */
+
+
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .check:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(34, 50, 84, 0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #c8ccd4;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+  }
+  
+  .check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+  }
+  
+  .check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+  }
+  
+  .check:hover:before {
+    opacity: 1;
+  }
+  
+  .check:hover svg {
+    stroke: var(--accent-color, #a3e583);
+  }
+  
+  #cbx2:checked + .check svg {
+    stroke: var(--accent-color, #a3e583);
+  }
+  
+  #cbx2:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+  
+  #cbx2:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
+
+
+ @media (max-width:900px) {
+    .log{
+        margin-left: auto;
+    }
+}
+
+@media (max-width:600px)
+{ 
+   .log{
+      width: 90%;
+   }
+   .inputGroup{
+    width: 90%;
+   }
+
+}
+

@@ -1,6 +1,26 @@
+.dodaj-odeljenje{
+  background-color: #6dcb63a6;
+  border: 3px solid #6ECB63;
+  color: #FBF4E9;
+  margin-top: 80px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px ;
+  font-size: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: center;
+}
+.dodaj-odeljenje:hover{
+  text-decoration: none;
+  background-color: #4a8744;
+  color: #FBF4E9;
+}
+
 .odeljenja{
     width: 100%;
-    margin-top: 100px;
+    margin-top: 20px;
     display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -140,4 +160,7 @@ a:hover{
     .card-client{
       width: 270px;
     }
-  }
+    .dodaj-odeljenje{
+      font-size: 25px;
+    }
+   }

@@ -16,6 +16,10 @@ body{
     padding: 0;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 /* ------------------------------------SCROL----------------------- */
 ::-webkit-scrollbar {
   width: 10px;
@@ -126,7 +130,7 @@ body{
  
   }
   
-  @media (max-width:800px) {
+  @media (max-width:1070px) {
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;

@@ -1,0 +1,251 @@
+.dodaj-lekciju{
+    background-color: #6dcb63a6;
+    border: 3px solid #6ECB63;
+    color: #FBF4E9;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px ;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .dodaj-lekciju:hover{
+    text-decoration: none;
+    background-color:#b0eca1cd;
+    color: #FBF4E9;
+  }
+.pozadina{
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    }
+    .pozadina img{
+        height: 100%;
+    }  
+.razmal{
+    height: 100px;
+}
+.kartica{
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 70%;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.levo{
+    margin-right: 32%;
+    margin-left: auto;
+    background-color: #EC9CD3;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.levo:hover{
+    border-top: 4px solid #e77cc5;
+    border-radius: 4px solid #e77cc5;
+    border-bottom: 4px solid #e77cc5;
+}
+.desno{
+    margin-left: 32%;
+    margin-right: auto;
+    background-color: #b0eca1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.desno:hover{
+    border-top: 4px solid #87a87e;
+    border-left: 4px solid #87a87e;
+    border-bottom: 4px solid #87a87e;
+}
+
+.post-kartica{
+    width: 250px;
+    margin-right: 30px;
+    color: #FBF4E9;
+    display: flex;
+    justify-content: center;
+}
+.slika{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.naslov-kartice h1{
+    font-size:30px;
+    color: #FBF4E9;
+}
+
+.naslov-kartice{
+ width: 100%;
+ padding: 20px 20px 10px 20px;
+}
+.naslov{
+    height: 80%;
+}
+.naslov p{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: flex-end;
+    color: #FBF4E9;
+
+}
+.autor-kartice{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: flex-end;
+    color: #FBF4E9;
+}
+
+.cta {
+    border: none;
+    background: none;
+    margin-top: 10px;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 16px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: #FBF4E9;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FBF4E9;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.strelica{
+    fill: #FBF4E9;
+}
+
+.ikonice{
+    width: 110px;
+    display: flex;
+    background-color: #FBF4E9;
+    margin-left: auto;
+    flex-direction: row-reverse;
+    padding: 5px;
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+.ikonica1{
+    margin-right: 0;
+}
+
+#icon {
+    height: 40px;
+     margin-right:0px; 
+}
+.ikonica1:hover{
+    padding: 5px;
+    border: 2px solid #6ECB63;
+    border-radius: 5px;
+    margin-right: 0;
+}
+
+.ikonica2:hover{
+    padding: 5px;
+    border: 2px solid #EC9CD3;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 1000px) {
+    .levo{
+        margin-right: auto;
+        width: 90%;
+        margin-left: 0px;
+    }
+    .desno{
+        width: 90%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    body{
+        display: block;
+    }
+    .dodaj-lekciju{
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:700px){
+    .kartica {
+        display: block;
+        border-radius: 20px;
+    }
+    .levo{
+        margin-right: auto;
+        width: 90%;
+        margin-left: auto;
+    }
+    .desno{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .post-kartica{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .naslov-kartice h1{
+        text-align: center;
+    }
+    .autor-kartice{
+        padding: 0;
+    }
+    
+}
+
+
+
+

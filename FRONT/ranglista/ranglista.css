@@ -1,0 +1,90 @@
+.pozadinaa{
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    }
+    .pozadinaa img{
+        height: 100%;
+    }  
+body{
+    display: block;
+}
+
+.razmak{
+    height: 20px;
+}
+    .dugmenazad{
+        background-color: #6ECB63;
+        color: #FBF4E9;
+        margin: 40px;
+        margin-left: 50px;
+        margin-right: auto;
+        padding: 10px;
+        border-radius: 5px ;
+        font-size: 20px;
+    }
+    .dugmenazad:hover{
+        text-decoration: none;
+        background-color: #4a8744;
+        color: #FBF4E9;
+    }
+
+    .tron{
+        width: 450px;
+        height: 65px;
+        background-color: #FBF4E9;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 25px #EC9CD3;
+        color: #EC9CD3;
+        text-align: center;
+        display: flex;
+       align-items: center;
+       justify-content: space-evenly;
+    }
+
+    .tron2{
+        width: 800px;
+        height: 50px;
+        background-color: #FBF4E9;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px #6ECB63;
+        color: #EC9CD3;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .bodovi{
+        color: #6ECB63;
+    }
+    .div1{
+        display: flex;
+        justify-content: center;
+    }
+    .div2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .win-slika{
+        margin-top: 20px;
+    }
+
+    .div3{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
