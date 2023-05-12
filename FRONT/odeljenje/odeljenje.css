@@ -125,10 +125,6 @@
   margin-right: 10px;
   width: 30px;
 }
-
-ucenik a{
-  display: flex;
-}
 .brisi:hover{
   border: 1px solid #6ECB63;
   background-color: #b0eca162;
