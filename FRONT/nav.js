@@ -5,7 +5,7 @@ let nav=`
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
         <div class="nav-title">
-            <img src="Slike/g109.png" class="nav-slika" style="height: 60px;" />
+            <img src="slike/g109.png" class="nav-slika" style="height: 60px;" />
         </div>
     </div>
 
@@ -24,7 +24,7 @@ let nav=`
         <a class="navbar" id="odeljenja" href="./odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>
         <a class="navbar" id="mojeLekcije" href="./moje-lekcije/moje-lekvije.html" style="display: none;">Moje lekcije</a>
         <a class="navbar" id="PrijaviSE" href="./login/log.html" >Prijavi se</a>
-        <div class="navImeDiv" id="navIme" onclick="odjavi()" style="display: none;"><p id="imePrezime">Ime i prezime</p></div>
+        <div class="navImeDiv" id="navIme"  style="display: none;"><button id="imePrezime" onclick="odjavi()">Ime i prezime</button></div>
     </div>
     <div class="divOdjaviSE" id="odjaviMe">
         <div class="divSpic">  <img src="./slike/spic.png" class="spic"/> </div>
@@ -55,6 +55,7 @@ let id=localStorage.getItem("id");
 
 async function test()
 {
+    console.log(1);
     if(id!==null)
     {
         document.getElementById("PrijaviSE").style.display="none";
@@ -85,18 +86,21 @@ async function test()
 }
 
 
-
+test();
 let provera=0;
-async function odjavi(){
-
+function odjavi()
+{
     if(provera===0)
     {
+        console.log(2);
         document.getElementById("odjaviMe").style.display="block";
         provera=1;
     }
-    if(provera===1)
+    else if(provera===1)
     {
+        console.log(3);
         document.getElementById("odjaviMe").style.display="none";
+        provera=0;
     }
    
 }
