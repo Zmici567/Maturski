@@ -4,6 +4,7 @@ const cors = require("cors");
 const baza = require("./BAZA/baza");
 
 const user = require("./FUNCTIONS/user");
+const odeljenje= require("./FUNCTIONS/odeljenje")
 
 const app = ex();
 
@@ -25,3 +26,9 @@ app.post("/api/Ucenik", user.postUcenik);
 app.post("/api/Profesor", user.postProfesor);
 app.delete("/api/users/:id",user.delete);
 app.post("/api/login",user.login);
+app.get("/api/getOne/:id",user.getOneUser);
+
+app.get("/api/odeljenja/:id_profesora",odeljenje.get);
+app.post("/api/odeljenje",odeljenje.post);
+app.delete("/api/odeljenje/:id",odeljenje.delete);
+app.put("/api/odeljenje/:id", odeljenje.addUcenik);

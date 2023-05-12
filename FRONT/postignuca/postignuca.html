@@ -53,7 +53,7 @@
 
       <div class="ime"> 
         <hr class="linija">
-      <div class="text2">  <div class="text"> <h2 id="text-h">Ime i prezime</div> <img src="../slike/edit.png" class="slika-edit"> </div>
+      <div class="text2">  <div class="text"> <h2 id="text-h">Ime i prezime</div> <img src="../slike/edit.png" class="slika-edit" onclick="izmeniUcenika()" > </div>
       <hr class="linija">
         
 
@@ -77,8 +77,8 @@
 
 <!------------------------------------------------edit------------------------------------------->          
       
-    <div class="div-edit">
-      <div class="x"><div class="x-img"><img src="../slike/x-mark.png" alt=""></div></div>
+    <div class="div-edit" id="izmeniDiv">
+      <div class="x"><div class="x-img" onclick="izmeniUcenikaNone()"><img src="../slike/x-mark.png" alt=""></div></div>
       <div class="div-dodaj">
       <h1>IZMENI PODATKE</h1>
       <div class="inputGroup">
@@ -94,5 +94,7 @@
       </div>
     </div>
   </div>
+
+  <script src="postignuca.js"></script>
 </bod>
 </html>

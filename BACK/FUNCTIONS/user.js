@@ -124,10 +124,39 @@ async function login(req,res)
     }
 }
 
+async function getOneUser(req,res)
+{
+    try
+    {
+        let user= await USER.findById(req.params.id);
+        if(user!==null)
+        {
+            res.json({
+                uspesnost:true,
+                user:user
+            })
+        }
+        else{
+            res.json({
+                uspesnost:false,
+                message:"404"
+            })
+        }
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            message:err.message
+        })
+    }
+}
+
 module.exports = (new Object({
     postUcenik:postUcenik,
     getUsers:getUsers,
     postProfesor:postProfesor,
     delete:del,
-    login:login
+    login:login,
+    getOneUser:getOneUser
 }))

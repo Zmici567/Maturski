@@ -78,6 +78,9 @@ a:hover{
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   
   .navbar::before {
@@ -130,6 +133,73 @@ a:hover{
  
   }
   
+  .navImeDiv{
+    display: flex;
+    align-items: center;
+    color: #FBF4E9;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top:12px ;
+    margin-left: 0;
+    font-weight: 700;
+    
+  }
+
+  .navImeDiv:hover{
+    color: #EC9CD3;
+  }
+  
+
+  .divOdjaviSE{
+    position: fixed;
+    display: block;
+    right: 0;
+    top: 50px;
+  }
+  .divSpic{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+  }
+  .spic{
+    width: 20px;
+  }
+  .odjavise{
+    background-color: #FBF4E9;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .odjaviDugme{
+    display: flex;
+    align-items: center;
+    color: #6ECB63;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .odjaviDugme:hover{
+    background-color: #ec9cd348;
+    border: 2px solid #f471cb;
+    color: #6ECB63;
+  }
+  .odjaviDugme p{
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .odjavi{
+    width: 25px;
+  }
+  .navOdjavi{
+    display: none;
+  }
+
   @media (max-width:1070px) {
     .nav > .nav-btn {
       display: inline-block;
@@ -150,7 +220,7 @@ a:hover{
       display: block;
       width: 25px;
       height: 10px;
-      border-top: 2px solid #eee;
+      border-top: 2px solid #FBF4E9;
     }
     .nav > .nav-links {
       position: absolute;
@@ -173,6 +243,36 @@ a:hover{
     .nav > #nav-check:checked ~ .nav-links {
       height: calc(100vh - 50px);
       overflow-y: auto;
+    }
+
+    
+    .navImeDiv{
+    padding-left: 16px;
+    } 
+    .navImeDiv:hover{
+      color:#FBF4E9 ;
+    }
+
+    .navOdjavi{
+      display: flex;
+      background-color: #FBF4E9;
+      width: 150px;
+      border-radius: 10px;
+      margin-left: 16px;
+      padding: 5px;
+      justify-content: center;
+      align-items: center;
+      color: #6ECB63;
+      font-weight: 700;
+    }
+    .navOdjavi p{
+      margin-bottom: 0;
+      margin-left: 5px;
+    }
+    .navOdjavi:hover{
+      background-color: #fbf4e9aa;
+      border: 2px solid #f471cb;
+      color: #6ECB63;
     }
   }
 

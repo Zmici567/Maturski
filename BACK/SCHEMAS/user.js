@@ -19,10 +19,11 @@ let userSchema = new mg.Schema({
         trim:true,
         require:true
     },
-    idProfesora:{
+    idOdeljenja:{
         type:String,
         trim:true
-    }
+    },
+    
 
 })
 

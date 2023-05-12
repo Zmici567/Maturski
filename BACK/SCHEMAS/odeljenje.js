@@ -23,4 +23,4 @@ let odeljenjeSchema= new mg.Schema({
     }]
 })
 
-module.exports=mg.module("odeljenje",odeljenjeSchema);
+module.exports=mg.model("odeljenje",odeljenjeSchema);

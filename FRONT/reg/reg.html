@@ -28,25 +28,25 @@
     <div class="log">
       <h1>KREIRAJ NALOG!</h1> <br>
       <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
+        <input type="text"  required="" id="ImePrezimeProf" autocomplete="off">
         <label for="name">Ime i prezime</label>
     </div>
 
     <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
+        <input type="text" required="" id="emailProf" autocomplete="off">
         <label for="name">Email</label>
     </div>
 
     <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
+        <input type="password" required="" id="passwordProf" autocomplete="off">
         <label for="name">Šifra</label>
     </div>
     <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
+        <input type="password" required="" id="passwordProfPot" autocomplete="off">
         <label for="name">Potvrdi šifru</label>
     </div>
 <br>
-<div class="prijavise">
+<div class="prijavise" onclick="registrujSE()">
     <p>Kreiraj nalog</p>
 </div>
 
@@ -57,6 +57,9 @@
 </div>
     </div>
    </div>
- 
+
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="reg.js"></script>
 </body>
 </html>

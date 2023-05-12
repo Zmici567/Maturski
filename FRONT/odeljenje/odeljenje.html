@@ -31,7 +31,7 @@
           
           <div class="text"> <h4 id="text-h">Škola:</h4><h4>Gimnazija u Cupriji</h4> </div> 
           <hr class="linija">
-        <div class="text2">  <div class="text"> <h2 id="text-h">Odeljenje:</h2><h2>4/4</h2> </div> <img src="../slike/edit.png" class="slika-edit"> </div>
+        <div class="text2">  <div class="text"> <h2 id="text-h">Odeljenje:</h2><h2>4/4</h2> </div> <img src="../slike/edit.png" class="slika-edit" onclick="izmeniDiv()"> </div>
   
           
 
@@ -39,10 +39,10 @@
         <div class="div-ucenici">
           <div class="dugmici">
           <a href="../ranglista/ranglista.html"><button class="rang"><p>Rang lista učenika</p><img src="../slike/rang.png" class="slika-dugme"></button></a>
-          <button class="dodaj"><p>Dodaj učenika</p><img src="../slike/plus..png" class="slika-dugme"></button>
+          <button class="dodaj" onclick="dodajUcenikaDiv()"><p>Dodaj učenika</p><img src="../slike/plus..png" class="slika-dugme"></button>
           </div>
           <div class="ucenici"> 
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
+            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><a href="../postignuca/postignuca.html" class="a-img" style="display: flex;"><img class="brisi"  src="../slike/ucenik.png"></a><img class="brisi" src="../slike/kanta.png"></div> </div>
 
             <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
 
@@ -77,8 +77,8 @@
     
 
   <!--------------------------------------------------------------dodaj ucenike-------------------------------------------> 
-      <div class="dodaj-ucenika">
-         <div class="x"><div class="x-img"><img src="../slike/x-mark.png" alt=""></div></div>
+      <div class="dodaj-ucenika" id="divDodajUcenika">
+         <div class="x"><div onclick="dodajUcenikaDivNone()" class="x-img"><img src="../slike/x-mark.png" alt=""></div></div>
           <div class="div-dodaj">
             <h1>Dodaj učenika </h1>
               <div class="inputGroup">
@@ -97,8 +97,8 @@
 
   <!------------------------------------------------edit------------------------------------------->          
         
-      <div class="div-edit">
-        <div class="x"><div class="x-img"><img src="../slike/x-mark.png" alt=""></div></div>
+      <div class="div-edit" id="izmeniDiv">
+        <div class="x"><div class="x-img" onclick="izmeniNone()"><img src="../slike/x-mark.png" alt=""></div></div>
         <div class="div-dodaj">
         <h1>IZMENI PODATKE</h1>
         <div class="inputGroup">
@@ -114,5 +114,7 @@
         </div>
       </div>
     </div>
+
+    <script src="odeljenje.js"></script>
   </bod>
   </html>
