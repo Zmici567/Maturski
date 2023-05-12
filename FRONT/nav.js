@@ -26,7 +26,7 @@ let nav=`
         <a class="navbar" id="PrijaviSE" href="./login/log.html" >Prijavi se</a>
         <div class="navImeDiv" id="navIme"  style="display: none;"><button id="imePrezime" onclick="odjavi()">Ime i prezime</button></div>
     </div>
-    <div class="divOdjaviSE" id="odjaviMe">
+    <div class="divOdjaviSE" id="odjaviMe" style="display:none;">
         <div class="divSpic">  <img src="./slike/spic.png" class="spic"/> </div>
           <div class="odjavise"> 
             <div class="odjaviDugme"> <img src="./slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
