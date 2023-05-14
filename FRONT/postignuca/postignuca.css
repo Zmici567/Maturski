@@ -1,4 +1,22 @@
 
+.dugmenazad{
+
+  background-color: #6ECB63;
+  color: #FBF4E9;
+  margin-top: 40px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px ;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.dugmenazad:hover{
+  text-decoration: none;
+  background-color: #4a8744;
+  color: #FBF4E9;
+  border: 2px solid #6ECB63;
+}
   .pozadina{
     position: fixed;
     width: 100%;

@@ -1,11 +1,11 @@
-const LINK = "http://localhost/";
+
 
 async function prijaviSE()
 {
     let email = document.getElementById("cirko").value;
     let password = document.getElementById("sojic").value;
 
-    let res = await axios.post(LINK+"api/login",{
+    let res = await axios.post(LINK+"/api/login",{
         email:email,
         password:password
     })

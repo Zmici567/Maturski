@@ -41,14 +41,15 @@
         <a class="navbar" href="../odeljenje-lista/lista.html" >Odeljenja</a>
         <a class="navbar" href="../postignuca/postignuca.html" >Postignuća</a>
         <a class="navbar" href="../moje-lekcije/moje-lekvije.html" >Moje lekcije</a>
-        <div class="navImeDiv" id="navIme"><p id="imePrezime">Ime i prezime</p></div>
+        <div class="navImeDiv" id="navIme"  style="display: none;"><button class="ImePrezimeDugme" id="imePrezime" onclick="odjavi()">Ime i prezime</button></div>
+        <a href="../postignuca/postignuca.html"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
         <div class="navOdjavi" id=""> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
       </div>
 
       <div class="divOdjaviSE">
         <div class="divSpic">  <img src="../slike/spic.png" class="spic"/> </div>
           <div class="odjavise"> 
-            <div class="odjaviDugme"><p>POSTIGNUCA</p></div>
+            <a href="../postignuca/postignuca.html"><div class="odjaviDugme"><p>POSTIGNUCA</p></div></a>
             <div class="odjaviDugme"> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
           </div>
       </div>
@@ -166,7 +167,8 @@
     </div>
   </div>
   </section>
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../index.js"></script>
 </body>
 </html>
 

@@ -29,20 +29,22 @@
     <div class="log"> <br>
       <h1>KREIRAJ ODELJENJE!</h1> <br><br> <br>
     <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
+        <input type="text" required="" autocomplete="off" id="skola">
         <label for="name">Škola</label>
     </div>
     <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
+        <input type="text" required="" autocomplete="off" id="odeljenje">
         <label for="name">Odeljenje</label>
     </div>
 <br>
-<div class="prijavise">
+<div class="prijavise" onclick="kreirajOdeljenje()">
     <p>Kreiraj odeljenje</p>
 </div>
 
     </div>
    </div>
- 
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="../index.js"></script>
+    <script src="odeljenja-forma.js"></script>
 </body>
 </html>

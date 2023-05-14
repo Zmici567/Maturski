@@ -4,11 +4,30 @@ async function get(req,res)
 {
     try
     {
-        let id = req.params.id;
+        let id = req.params.id_profesora;
         let odeljenja = await ODELJENJE.find({idProfesora:id});
         res.json({
             uspesnost:true,
             odeljenja:odeljenja
+        })
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            message:err.message
+        })
+    }
+}
+async function getById(req,res)
+{
+    try
+    {
+        let id = req.params.id;
+        let odeljenja = await ODELJENJE.findById(id);
+        res.json({
+            uspesnost:true,
+            odeljenje:odeljenja
         })
     }
     catch(err)
@@ -88,5 +107,6 @@ module.exports = new Object({
     get:get,
     post:post,
     delete:del,
-    addUcenik:addUcenik
+    addUcenik:addUcenik,
+    getById:getById
 })

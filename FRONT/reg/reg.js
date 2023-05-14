@@ -1,4 +1,3 @@
-const LINK = "http://localhost";
 
 async function registrujSE()
 { 

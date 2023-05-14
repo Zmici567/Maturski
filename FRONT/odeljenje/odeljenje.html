@@ -17,7 +17,7 @@
       <link href="../style.css" rel="stylesheet">
       <link href="odeljenje.css" rel="stylesheet">
   </head>
-  <body>
+  <body onload="ucitajOdeljenje()">
 
 
       <!-- -----------------------------------------ODELJENJE----------------------------------------------------- -->
@@ -29,9 +29,9 @@
         <div class="odelj">
           
           
-          <div class="text"> <h4 id="text-h">Škola:</h4><h4>Gimnazija u Cupriji</h4> </div> 
+          <div class="text"> <h4 id="text-h">Škola:</h4><h4 id="odeljenjeSkola">Gimnazija u Cupriji</h4> </div> 
           <hr class="linija">
-        <div class="text2">  <div class="text"> <h2 id="text-h">Odeljenje:</h2><h2>4/4</h2> </div> <img src="../slike/edit.png" class="slika-edit" onclick="izmeniDiv()"> </div>
+        <div class="text2">  <div class="text"> <h2 id="text-h">Odeljenje:</h2><h2 id="odeljenjeNaziv">4/4</h2> </div> <img src="../slike/edit.png" class="slika-edit" onclick="izmeniDiv()"> </div>
   
           
 
@@ -41,34 +41,8 @@
           <a href="../ranglista/ranglista.html"><button class="rang"><p>Rang lista učenika</p><img src="../slike/rang.png" class="slika-dugme"></button></a>
           <button class="dodaj" onclick="dodajUcenikaDiv()"><p>Dodaj učenika</p><img src="../slike/plus..png" class="slika-dugme"></button>
           </div>
-          <div class="ucenici"> 
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><a href="../postignuca/postignuca.html" class="a-img" style="display: flex;"><img class="brisi"  src="../slike/ucenik.png"></a><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
-
-            <div class="ucenik"> <p>Ime i prezime</p> <div class="ikonice"><img class="brisi" src="../slike/ucenik.png"><img class="brisi" src="../slike/kanta.png"></div> </div>
+          <div class="ucenici" id ="container"> 
+            
           </div>
         </div>
 
@@ -114,7 +88,8 @@
         </div>
       </div>
     </div>
-
-    <script src="odeljenje.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../index.js"></script>
+    <script src="./odeljenje.js"></script>
   </bod>
   </html>

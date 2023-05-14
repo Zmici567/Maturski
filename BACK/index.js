@@ -32,3 +32,4 @@ app.get("/api/odeljenja/:id_profesora",odeljenje.get);
 app.post("/api/odeljenje",odeljenje.post);
 app.delete("/api/odeljenje/:id",odeljenje.delete);
 app.put("/api/odeljenje/:id", odeljenje.addUcenik);
+app.get("/api/odeljenje/:id",odeljenje.getById);

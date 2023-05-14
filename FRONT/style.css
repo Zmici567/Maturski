@@ -15,7 +15,6 @@ body{
     background-color: #FBF4E9 ;
     padding: 0;
 }
-
 a:hover{
   text-decoration: none;
 }
@@ -142,10 +141,34 @@ a:hover{
     margin-top:12px ;
     margin-left: 0;
     font-weight: 700;
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
     
   }
 
   .navImeDiv:hover{
+    color: #EC9CD3;
+  }
+
+  .ImePrezimeDugme{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: #FBF4E9;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 0;
+    font-weight: 700;
+    border: none;
+  }
+  .ImePrezimeDugme:hover{
     color: #EC9CD3;
   }
   
@@ -264,6 +287,7 @@ a:hover{
       align-items: center;
       color: #6ECB63;
       font-weight: 700;
+      margin-top: 10px;
     }
     .navOdjavi p{
       margin-bottom: 0;
@@ -276,6 +300,12 @@ a:hover{
     }
   }
 
+  @media (min-width:1070px){
+    .navOdjavi{
+      display: none;
+    }
+  }
+
 
 /*--------------------------------------------------------------
 # Footer Section
@@ -283,8 +313,9 @@ a:hover{
 
 #footer{
   bottom: 0;
+  height: 100%;
   width: 100%;
-  position: relative;
+  position:relative;
   margin-top: 40px;
 }
 .footer{

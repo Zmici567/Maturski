@@ -17,129 +17,16 @@
     <link href="../style.css" rel="stylesheet">
     <link href="lista.css" rel="stylesheet">
 </head>
-<body>
+<body onload="ucitaj()">
     <!----------------------------------- ======= Navbar ======= -------------------------------------------->
-    <div class="nav">
-      <input type="checkbox" id="nav-check">
-      <div class="nav-header">
-        <div class="nav-title">
-          <img src="../slike/g109.png" class="nav-slika" style="height: 60px;" />
-        </div>
-      </div>
-
-      <div class="nav-btn">
-        <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-      
-      <div class="nav-links">
-        <a class="navbar " href="../index.html" >Početna</a>
-        <a class="navbar" href="../lekcije/lekcije.html">Lekcije</a>
-        <a class="navbar activ" href="./lista.css" >Odeljenja</a>
-        <a class="navbar" href="../postignuca/postignuca.html" >Postignuća</a>
-        <a class="navbar" href="../moje-lekcije/moje-lekvije.html" >Moje lekcije</a>
-        <a class="navbar" href="../login/log.html" >Prijavi se</a>
-      </div>
-    </div>
 
     <!-- ---------------------------------------Odeljenja---------------------------------------------------- -->
     <br><br>
     <a href="../odeljenja-forma/odeljenja-forma.html" class="dodaj-odeljenje"> <img src="../slike/plus..png" class="nav-slika" style="height: 40px; margin-right: 10px; " /> Dodaj odeljenje </a><br><br>
-    <section class="odeljenja">
+    <section class="odeljenja" id="listaOdeljenja">
 
-        <a href="../odeljenje/odeljenje.html"><div class="card-client">
-            <div class="odeljenje">
-                <h1>4/4</h1>
-            </div>
-            <p class="name-client"> Škola:
-                <span>Gimnazija</span>
-            </p>
-            <div class="social-media">
-            </div>
-        </div>
-       </a>
-       <a href="../odeljenje/odeljenje.html"><div class="card-client">
-        <div class="odeljenje">
-            <h1>4/4</h1>
-        </div>
-        <p class="name-client"> Škola:
-            <span>Gimnazija</span>
-        </p>
-        <div class="social-media">
-        </div>
-    </div>
-   </a>
-   <a href="../odeljenje/odeljenje.html"><div class="card-client">
-    <div class="odeljenje">
-        <h1>4/4</h1>
-    </div>
-    <p class="name-client"> Škola:
-        <span>Gimnazija</span>
-    </p>
-    <div class="social-media">
-    </div>
-</div>
-</a>
-<a href="../odeljenje/odeljenje.html"><div class="card-client">
-    <div class="odeljenje">
-        <h1>4/4</h1>
-    </div>
-    <p class="name-client"> Škola:
-        <span>Gimnazija</span>
-    </p>
-    <div class="social-media">
-    </div>
-</div>
-</a> <a href="../odeljenje/odeljenje.html"><div class="card-client">
-    <div class="odeljenje">
-        <h1>4/4</h1>
-    </div>
-    <p class="name-client"> Škola:
-        <span>Gimnazija</span>
-    </p>
-    <div class="social-media">
-    </div>
-</div>
-</a>
-<a href="../odeljenje/odeljenje.html"><div class="card-client">
-    <div class="odeljenje">
-        <h1>4/4</h1>
-    </div>
-    <p class="name-client"> Škola:
-        <span>Gimnazija</span>
-    </p>
-    <div class="social-media">
-    </div>
-</div>
-</a>
-<a href="../odeljenje/odeljenje.html"><div class="card-client">
-    <div class="odeljenje">
-        <h1>4/4</h1>
-    </div>
-    <p class="name-client"> Škola:
-        <span>Gimnazija</span>
-    </p>
-    <div class="social-media">
-    </div>
-</div>
-</a>
-<a href="../odeljenje/odeljenje.html"><div class="card-client">
-    <div class="odeljenje">
-        <h1>4/4</h1>
-    </div>
-    <p class="name-client"> Škola:
-        <span>Gimnazija</span>
-    </p>
-    <div class="social-media">
-    </div>
-</div>
-</a>
-    
-    
 
+    
     </section>
     <!--------------------------------------==FOOTER==-------------------------------------------------------->
 <section id="footer">
@@ -155,8 +42,13 @@
       <div class="kon"><a href="https://www.w3schools.com/" target="_blank"><img src="../slike/gmail.png" style="width: 50px;"></img></img></a></div>
       </div>
     </div>
-    </section>
+</section>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../index.js"></script>
+    <script src="../nav.js"></script>
+    <script src="lista.js"></script>
 </body>
 </html>
 

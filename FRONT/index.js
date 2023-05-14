@@ -1,0 +1,1 @@
+const LINK = "http://localhost";

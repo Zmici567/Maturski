@@ -5,7 +5,7 @@ let nav=`
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
         <div class="nav-title">
-            <img src="../slike/g109.png" class="nav-slika" style="height: 60px;" />
+            <img src="slike/g109.png" class="nav-slika" style="height: 60px;" />
         </div>
     </div>
 
@@ -18,14 +18,14 @@ let nav=`
     </div>
 
     <div class="nav-links">
-        <a class="navbar" id="pocetna" href="../index.html"  >Početna</a>
+        <a class="navbar" id="pocetna" href="index.html"  >Početna</a>
         <a class="navbar" id="oNama" href="#onama" >O nama</a>
-        <a class="navbar" id="lekcije" href="../lekcije/lekcije.html">Lekcije</a>
-        <a class="navbar" id="odeljenja" href="../odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>
-        <a class="navbar" id="mojeLekcije" href="../moje-lekcije/moje-lekvije.html" style="display: none;">Moje lekcije</a>
-        <a class="navbar" id="PrijaviSE" href="../login/log.html" >Prijavi se</a>
+        <a class="navbar" id="lekcije" href="lekcije/lekcije.html">Lekcije</a>
+        <a class="navbar" id="odeljenja" href="./odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>
+        <a class="navbar" id="mojeLekcije" href="./moje-lekcije/moje-lekvije.html" style="display: none;">Moje lekcije</a>
+        <a class="navbar" id="PrijaviSE" href="./login/log.html" >Prijavi se</a>
         <div class="navImeDiv" id="navIme"  style="display: none;"><div class="ImePrezimeDugme" id="imePrezime" onclick="odjaviDiv()">Ime i prezime</div></div>
-        <a href="../postignuca/postignuca.html" id="postignucaMob" style="display: none;"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
+        <a href="./postignuca/postignuca.html" id="postignucaMob" style="display: none;"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
         <div class="navOdjavi" id="odjaviMob" onclick="odjaviMeMob()" style="display: none;> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
     </div>
 
