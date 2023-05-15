@@ -17,7 +17,7 @@
     <link href="../style.css" rel="stylesheet">
     <link href="postignuca.css" rel="stylesheet">
 </head>
-<body>
+<body onload="ucitaj()">
  
 
     <!-- -----------------------------------------ODELJENJE----------------------------------------------------- -->
@@ -26,7 +26,7 @@
   </div>
     <section class="imeprezime"><br>
       <a href="../odeljenje/odeljenje.html" class="dugmenazad"> <img src="../slike/back (1).png" class="nav-slika" style="height: 20px;" /> NAZAD p</a><br><br>
-      <a href="../index.html" class="dugmenazad"> <img src="../slike/back (1).png" class="nav-slika" style="height: 20px;" /> NAZAD u</a><br><br>
+      <!-- <a href="../index.html" class="dugmenazad"> <img src="../slike/back (1).png" class="nav-slika" style="height: 20px;" /> NAZAD u</a><br><br> -->
 
       <div class="ime"> 
         <hr class="linija">
@@ -37,12 +37,9 @@
       </div>
       <div class="div-lekcije">
         <div class="ukupnib">
-        <h3 class="b-text">Ukupni broj bodova:</h3><h3>15</h3>
+        <h3 class="b-text">Ukupni broj bodova:</h3><h3 id="bodovi">15</h3>
         </div>
-        <div class="lekcije"> 
-          <div class="lekcija"> <p>Naslov lekcije....................... ........... ........... ........... ....................... ................ .......... .................</p> <div class="bodovi"><p class="b-text">Bodovi:</p><p>10</p></div> </div>
-
-          <div class="lekcija"> <p>Naslov lekcije.......................</p> <div class="bodovi"><p class="b-text">Bodovi:</p><p>5</p></div> </div>
+        <div class="lekcije" id="container"> 
 
           
         </div>

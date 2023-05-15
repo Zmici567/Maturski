@@ -50,6 +50,7 @@ app.get("/api/odeljenja/:id_profesora",odeljenje.get);
 app.post("/api/odeljenje",odeljenje.post);
 app.delete("/api/odeljenje/:id",odeljenje.delete);
 app.get("/api/odeljenje/:id",odeljenje.getById);
+app.put("/api/odeljenje/:id", odeljenje.izmeni);
 
 app.get("/api/lekcije",lekcija.get);
 app.get("/api/lekcija/:id", lekcija.getById);

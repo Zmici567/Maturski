@@ -80,9 +80,33 @@ async function del(req,res)
     }
 }
 
+async function izmeni(req,res)
+{
+    try
+    {
+        let odeljenje = await ODELJENJE.findById(req.params.id)
+        odeljenje.naziv = req.body.naziv;
+        odeljenje.skola = req.body.skola;
+        let saved = await odeljenje.save();
+        res.json({
+            uspesnost:true,
+            saved:saved
+        })
+
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            message:err.message
+        })
+    }
+}
+
 module.exports = new Object({
     get:get,
     post:post,
     delete:del,
-    getById:getById
+    getById:getById,
+    izmeni:izmeni
 })
