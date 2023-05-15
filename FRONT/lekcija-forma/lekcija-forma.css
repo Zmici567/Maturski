@@ -234,6 +234,21 @@ margin-bottom: 0px;
   .check:hover svg {
     stroke: var(--accent-color, #a3e583);
   }
+
+  #cbx1:checked + .check svg {
+    stroke: var(--accent-color, #a3e583);
+  }
+  
+  #cbx1:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+  
+  #cbx1:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
   
   #cbx2:checked + .check svg {
     stroke: var(--accent-color, #a3e583);
@@ -245,6 +260,22 @@ margin-bottom: 0px;
   }
   
   #cbx2:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
+
+
+  #cbx3:checked + .check svg {
+    stroke: var(--accent-color, #a3e583);
+  }
+  
+  #cbx3:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+  
+  #cbx3:checked + .check svg polyline {
     stroke-dashoffset: 42;
     transition: all 0.2s linear;
     transition-delay: 0.15s;

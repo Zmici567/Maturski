@@ -1,5 +1,3 @@
-
-
 async function prijaviSE()
 {
     let email = document.getElementById("cirko").value;
