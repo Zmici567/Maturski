@@ -87,7 +87,7 @@ async function post(req,res)
     }
 }
 
-module.exports=newObject({
+module.exports=new Object({
     get:get,
     getById:getById,
     delete:del,
