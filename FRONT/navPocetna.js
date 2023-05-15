@@ -33,7 +33,7 @@ let nav=`
     <div class="divOdjaviSE" id="odjaviMe" style="display:none;">
         <div class="divSpic">  <img src="./slike/spic.png" class="spic"/> </div>
           <div class="odjavise"> 
-            <a href="../postignuca/postignuca.html" id="postignuca"><div class="odjaviDugme" style="display: none;"><p>POSTIGNUCA</p></div></a>
+            <a id="postignucaLink" href="../postignuca/postignuca.html" ><div class="odjaviDugme" id="postignuca" style="display: none;"><p>POSTIGNUCA</p></div></a>
             <div class="odjaviDugme" onclick="odjaviMe()"> <img src="./slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
           </div>
       </div>
@@ -43,7 +43,6 @@ ${body}`
 
 try
 { 
-    console.log(nav);
     document.body.innerHTML="";
     document.body.innerHTML=nav;
 }
@@ -65,7 +64,12 @@ async function test()
     {
         document.getElementById("PrijaviSE").style.display="none";
         document.getElementById("navIme").style.display="flex"
-        document.getElementById("odjaviMob").style.display="none"
+
+        if(window.innerWidth<=1070)
+        {
+            document.getElementById("odjaviMob").style.display="block"
+        }
+        
 
         let res=await axios.get(LINK+"/api/getOne/"+id);
         console.log(res);
@@ -74,19 +78,21 @@ async function test()
             let user=res.data.user;
             document.getElementById("imePrezime").innerHTML=user.imeIprezime;
 
-
+            console.log(user.tip===1);
             if(user.tip===0)
             {
                 document.getElementById("odeljenja").style.display="block"
                 document.getElementById("mojeLekcije").style.display="block"
                 document.getElementById("oNama").style.display="none"
             }
-            if(user.tip===1)
+            else if(user.tip===1)
             {
 
                 document.getElementById("oNama").style.display="none"
                 document.getElementById("postignuca").style.display="block"
                 document.getElementById("postignucaMob").style.display="block"
+                document.getElementById("postignucaMob").href+="?"+user._id;
+                document.getElementById("postignucaLink").href+="?"+user._id;
             }
         }
         
@@ -110,6 +116,7 @@ function odjaviDiv()
         {
             console.log(3);
             document.getElementById("odjaviMe").style.display="none";
+
             provera=0;
         }
     }  

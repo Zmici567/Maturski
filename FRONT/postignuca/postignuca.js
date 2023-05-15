@@ -13,9 +13,10 @@ async function ucitaj()
     let id = location.search.substring(1);
     console.log(id);
     let res = await axios.get(LINK+"/api/getOne/"+id);
+    let ucenik = res.data.user;
     if(res.data.uspesnost)
     {
-        let ucenik = res.data.user;
+        
         console.log(ucenik);
         document.getElementById("text-h").innerHTML=ucenik.imeIprezime;
         document.getElementById("bodovi").innerHTML=ucenik.brojBodova;
@@ -34,5 +35,19 @@ async function ucitaj()
         document.getElementById("container").innerHTML=div;
     }
 
-    let userId;
+    let userId = localStorage.getItem("id");
+
+    res = await axios.get(LINK+"/api/getOne/"+userId);
+    if(res.data.uspesnost)
+    {
+        let user = res.data.user;
+        if(user.tip===0)
+        {
+            document.getElementById("nazad").href="../odeljenje/odeljenje.html?"+ucenik.idOdeljenja;
+        }
+        else if(user.tip === 1)
+        {
+            document.getElementById("nazad").href="../index.html";
+        }
+    }
 }

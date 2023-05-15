@@ -43,7 +43,6 @@ ${body}`
 
 try
 { 
-    console.log(nav);
     document.body.innerHTML="";
     document.body.innerHTML=nav;
 }
@@ -60,7 +59,6 @@ let id=localStorage.getItem("id");
 
 async function test()
 {
-    console.log(1);
     if(id!==null)
     {
         document.getElementById("PrijaviSE").style.display="none";
@@ -68,25 +66,28 @@ async function test()
         document.getElementById("odjaviMob").style.display="none"
 
         let res=await axios.get(LINK+"/api/getOne/"+id);
-        console.log(res);
         if(res.data.uspesnost)
         {
             let user=res.data.user;
+            console.log(user);
             document.getElementById("imePrezime").innerHTML=user.imeIprezime;
 
 
             if(user.tip===0)
             {
-                document.getElementById("odeljenja").style.display="block"
-                document.getElementById("mojeLekcije").style.display="block"
-                document.getElementById("oNama").style.display="none"
+                document.getElementById("odeljenja").style.display="block";
+                document.getElementById("mojeLekcije").style.display="block";
+                document.getElementById("oNama").style.display="none";
+                console.log(1);
             }
             if(user.tip===1)
             {
-
-                document.getElementById("oNama").style.display="none"
-                document.getElementById("postignuca").style.display="block"
-                document.getElementById("postignucaMob").style.display="block"
+                console.log(user._id)
+                document.getElementById("oNama").style.display="none";
+                document.getElementById("postignuca").style.display="block";
+                document.getElementById("postignucaMob").style.display="block";
+                document.getElementById("postignucaMob").href+="?"+user._id;
+                console.log(1);
             }
         }
         
