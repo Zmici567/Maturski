@@ -1,5 +1,20 @@
 const mg = require("mongoose");
 
+const odeljenjeSchema = require("./odeljenje");
+const lekcijeSchema = require("./lekcija")
+
+let uradjenaLekcija = new mg.Schema({
+    idLekcije:{
+        type:mg.Schema.Types.ObjectId,
+        ref:"lekcija",
+        require:true
+    },
+    bodovi:{
+        type:Number,
+        require:true
+    }
+})
+
 let userSchema = new mg.Schema({
     tip:{
         type:Number,
@@ -20,10 +35,13 @@ let userSchema = new mg.Schema({
         require:true
     },
     idOdeljenja:{
-        type:String,
-        trim:true
+        type:mg.Schema.Types.ObjectId,
+        ref:"odeljenje"
     },
-    
+    brojBodova:{
+        type:Number,
+    },
+    uradjeneLekcije:[uradjenaLekcija]
 
 })
 

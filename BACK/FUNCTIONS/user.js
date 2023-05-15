@@ -8,7 +8,9 @@ async function postUcenik(req,res)
             tip:1,
             imeIprezime:req.body.imeIprezime,
             password:req.body.password,
-            idProfesora:req.body.idProfesora
+            idOdeljenja:req.body.idOdeljenja,
+            brojBodova:0,
+            uradjeneLekcije:[]
         })
         let saved = await ucenik.save();
         res.json({
