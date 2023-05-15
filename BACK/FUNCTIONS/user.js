@@ -1,4 +1,5 @@
 const USER = require("../SCHEMAS/user");
+const ODELJENJE = require("../SCHEMAS/odeljenje");
 
 async function postUcenik(req,res)
 {
@@ -13,6 +14,13 @@ async function postUcenik(req,res)
             uradjeneLekcije:[]
         })
         let saved = await ucenik.save();
+        let idOdeljenja = req.body.idOdeljenja;
+        let id = saved._id;
+
+        let odeljenje=await ODELJENJE.findById(idOdeljenja);
+        odeljenje.idUcenika.push(id);
+        await odeljenje.save();
+
         res.json({
             uspesnost:true,
             sacuvano:saved
@@ -154,11 +162,82 @@ async function getOneUser(req,res)
     }
 }
 
+async function UcenikPromenaPodataka(req,res)
+{
+    try
+    {
+        let id = req.params.id;
+        let imeIPrezime = req.body.imeIPrezime;
+        let password = req.body.password;
+
+        let ucenik = await USER.findById(id);
+        ucenik.imeIprezime=imeIPrezime;
+        ucenik.password=password
+        let saved = await ucenik.save();
+        res.json({
+            uspesnost:true,
+            saved:saved
+        })
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            message:err.message
+        })
+    }
+}
+
+async function bodovi(req,res)
+{
+    try
+    {
+        let id = req.params.id;
+        let bodovi = req.body.bodovi;
+        
+        let ucenik = await USER.findById(id);
+        ucenik.bodovi+=bodovi;
+        let saved=ucenik.save();
+        res.json({
+            uspesnost:true,
+            saved:saved
+        })
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            message:err.message
+        })
+    }
+}
+
+async function dodajLekciju(req,res)
+{
+    try
+    {
+        let id = req.params.id;
+        let lekcija = req.body.lekcija;
+        let ucenik = await USER.findById(id);
+        ucenik.uradjeneLekcije.push(lekcija);
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            message:err.message
+        })
+    }
+}
+
 module.exports = (new Object({
     postUcenik:postUcenik,
     getUsers:getUsers,
     postProfesor:postProfesor,
     delete:del,
     login:login,
-    getOneUser:getOneUser
+    getOneUser:getOneUser,
+    UcenikPromenaPodataka:UcenikPromenaPodataka,
+    promenaBodova:bodovi,
+    dodavanjeLekcije:dodajLekciju,
 }))

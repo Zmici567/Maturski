@@ -80,33 +80,9 @@ async function del(req,res)
     }
 }
 
-async function addUcenik(req,res)
-{
-    try
-    {
-        let id = req.params.id;
-        let idUcenika = req.body.idUcenika;
-        let odeljenje = await ODELJENJE.findById(id);
-        odeljenje.idUcenika.push(idUcenika);
-        let updated = await odeljenje.save();
-        res.json({
-            uspesnost:true,
-            updated:updated
-        })
-    }
-    catch(err)
-    {
-        res.json({
-            uspesnost:false,
-            message:err.message
-        })
-    }
-}
-
 module.exports = new Object({
     get:get,
     post:post,
     delete:del,
-    addUcenik:addUcenik,
     getById:getById
 })
