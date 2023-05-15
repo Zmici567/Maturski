@@ -32,10 +32,11 @@ async function ucitajOdeljenje(){
         document.getElementById("odeljenjeNaziv").innerHTML=odeljenje.naziv;
 
         let div=``;
-        await (odeljenje.idUcenika.forEach(await (async idUcenika => {
-            let res=await axios.get(LINK+"/api/getOne/"+idUcenika);
-            console.log(res);
-
+        
+        let idUcenika=odeljenje.idUcenika;
+        for(let i=0;i<idUcenika.length;i++)
+        {
+            let res=await axios.get(LINK+"/api/getOne/"+idUcenika[i]);
             if(res.data.uspesnost)
             {
                 let ucenik=res.data.user;
@@ -47,13 +48,14 @@ async function ucitajOdeljenje(){
                         <a href="../postignuca/postignuca.html?${ucenik._id}" class="a-img" style="display: flex;">
                             <img class="brisi"  src="../slike/ucenik.png">
                         </a>
-                        <img class="brisi" src="../slike/kanta.png">
+                        <div class="brisiU" onclick="obrisiUcenika('${ucenik._id}')"><img class="brisi" src="../slike/kanta.png"></div>
                     </div> 
                 </div>
                 `
             }
-        })));
-        console.log(div)
+        }
+
+        
         document.getElementById("container").innerHTML=div;
     }
 }
@@ -92,7 +94,7 @@ async function dodajUcenika()
                 document.getElementById("divDodajUcenika").style.display="none";
                 document.getElementById("imeUcenika").value="";
                 document.getElementById("sifraUcenika").value="";
-
+                await ucitajOdeljenje();
             }
             else
             {
@@ -105,5 +107,17 @@ async function dodajUcenika()
     catch(err)
     {
         console.log(err)
+    }
+}
+
+async function obrisiUcenika(id)
+{
+    if(confirm("Da li ste sigurni da zelite da obrisete ucenika?")===true)
+    {
+        let res = await axios.delete(LINK+"/api/users/"+id);
+        if(res.data.uspesnost)
+        {
+            await ucitajOdeljenje();
+        }
     }
 }

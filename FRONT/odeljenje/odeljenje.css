@@ -123,6 +123,10 @@
 .ikonice{
   display: flex;
 }
+.brisiU{
+  display: flex;
+  
+}
 .brisi{
   margin-right: 10px;
   width: 30px;
