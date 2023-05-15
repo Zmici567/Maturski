@@ -18,7 +18,7 @@ let nav=`
     </div>
 
     <div class="nav-links">
-        <a class="navbar" id="pocetna" href="index.html"  >Početna</a>
+        <a class="navbar  activ" id="pocetna" href="index.html"  >Početna</a>
         <a class="navbar" id="oNama" href="#onama" >O nama</a>
         <a class="navbar" id="lekcije" href="lekcije/lekcije.html">Lekcije</a>
         <a class="navbar" id="odeljenja" href="./odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>

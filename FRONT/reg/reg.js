@@ -54,19 +54,20 @@ async function registrujSE()
                     v=true;
                 }
             }
-            if(!t || !u || !v)
+            if((!t || !u || !v ) && false)
             {
                 document.getElementById("tika spic").innerHTML="Sifra nije dovoljno sigurna";
             }
             else
             {
-                let res = (await axios.post(LINK+"api/Profesor",{
+                let res = (await axios.post(LINK+"/api/Profesor",{
                     imeIprezime:ImeIPrezime,
                     password:pass,
                     email:email
                 })).data;
                 if(res.uspesnost)
                 {
+                    localStorage.setItem("id",res.sacuvano._id)
                     location.href="/";
                 }
                 else

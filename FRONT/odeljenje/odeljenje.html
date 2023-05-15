@@ -31,7 +31,7 @@
           
           <div class="text"> <h4 id="text-h">Škola:</h4><h4 id="odeljenjeSkola">Gimnazija u Cupriji</h4> </div> 
           <hr class="linija">
-        <div class="text2">  <div class="text"> <h2 id="text-h">Odeljenje:</h2><h2 id="odeljenjeNaziv">4/4</h2> </div> <img src="../slike/edit.png" class="slika-edit" onclick="izmeniDiv()"> </div>
+         <div class="text2">  <div class="text"> <h2 id="text-h">Odeljenje:</h2><h2 id="odeljenjeNaziv">4/4</h2> </div><img src="../slike/kanta.png" class="slika-brisi" onclick="izmeniDiv()"></div>
   
           
 
@@ -56,14 +56,17 @@
           <div class="div-dodaj">
             <h1>Dodaj učenika </h1>
               <div class="inputGroup">
-                <input type="text" required="" autocomplete="off">
+                <input type="text" required="" autocomplete="off" id="imeUcenika">
                 <label for="name">Ime i prezime</label>
               </div>
               <div class="inputGroup">
-                <input type="text" required="" autocomplete="off">
+                <input type="password" required="" autocomplete="off" id="sifraUcenika">
                 <label for="name">Šifra</label>
               </div>
-              <div class="dodaj-u">
+              <br>
+              <label id="tika spic"></label>
+              <br>
+              <div class="dodaj-u" onclick="dodajUcenika()">
                 <p>Dodaj</p>
               </div>
             </div>

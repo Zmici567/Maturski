@@ -30,13 +30,14 @@ async function ucitajOdeljenje(){
 
         document.getElementById("odeljenjeSkola").innerHTML=odeljenje.skola;
         document.getElementById("odeljenjeNaziv").innerHTML=odeljenje.naziv;
+
         let div=``;
         await (odeljenje.idUcenika.forEach(await (async idUcenika => {
             let res=await axios.get(LINK+"/api/getOne/"+idUcenika);
             console.log(res);
+
             if(res.data.uspesnost)
             {
-                
                 let ucenik=res.data.user;
                 console.log(ucenik)
                 div+=`
@@ -54,5 +55,55 @@ async function ucitajOdeljenje(){
         })));
         console.log(div)
         document.getElementById("container").innerHTML=div;
+    }
+}
+
+async function dodajUcenika()
+{
+    id=location.search.substring(1)
+    try
+    {
+        let ime=document.getElementById("imeUcenika").value;
+        let sifra= document.getElementById("sifraUcenika").value;
+       
+        if(ime==="")
+        {
+            document.getElementById("tika spic").innerHTML="Niste uneli Ime i Pezime!!!"
+        }
+        else if(sifra === "")
+        {
+            document.getElementById("tika spic").innerHTML="Niste uneli sifru!!!"
+        }
+        else if(sifra.length<8)
+        {
+            document.getElementById("tika spic").innerHTML="Sifra ima manje od 8 karaktera!!!";
+        }
+        else{
+            let Ucenik={
+                imeIprezime:(String)(document.getElementById("imeUcenika").value),
+                password:(String)(document.getElementById("sifraUcenika").value),
+                idOdeljenja:id
+            }
+            console.log("ucitaj ucenika")
+            var res=await axios.post(LINK+"/api/Ucenik",Ucenik)
+            console.log(res)
+            if(res.data.uspesnost)
+            {
+                document.getElementById("divDodajUcenika").style.display="none";
+                document.getElementById("imeUcenika").value="";
+                document.getElementById("sifraUcenika").value="";
+
+            }
+            else
+            {
+                document.getElementById("tika spic").innerHTML=res.data.message;
+            }
+        }
+
+        
+    }
+    catch(err)
+    {
+        console.log(err)
     }
 }

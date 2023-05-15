@@ -39,4 +39,7 @@ async function ucitaj()
         });
         document.getElementById("listaOdeljenja").innerHTML=div;
     }
+
+    let navbar=document.getElementById("odeljenja")
+    navbar.classList.add("activ")
 }
