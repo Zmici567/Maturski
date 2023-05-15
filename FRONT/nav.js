@@ -18,15 +18,16 @@ let nav=`
     </div>
 
     <div class="nav-links">
-        <a class="navbar" id="pocetna" href="../index.html"  >Početna</a>
-        <a class="navbar" id="lekcije" href="../lekcije/lekcije.html">Lekcije</a>
-        <a class="navbar" id="odeljenja" href="../odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>
-        <a class="navbar" id="mojeLekcije" href="../moje-lekcije/moje-lekvije.html" style="display: none;">Moje lekcije</a>
-        <a class="navbar" id="PrijaviSE" href="../login/log.html" >Prijavi se</a>
-        <div class="navImeDiv" id="navIme"  style="display: none;"><div class="ImePrezimeDugme" id="imePrezime" onclick="odjaviDiv()"><img src="../slike/ucenik.png" class="korisnik" /></div></div>
-        <a href="../postignuca/postignuca.html" id="postignucaMob" style="display: none;"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
-        <div class="navOdjavi" id="odjaviMob" onclick="odjaviMeMob()" style="display: none;"> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
-    </div>
+    <a class="navbar" id="pocetna" href="../index.html"  >Početna</a>
+    <a class="navbar" id="oNama" href="#onama" >O nama</a>
+    <a class="navbar" id="lekcije" href="../lekcije/lekcije.html">Lekcije</a>
+    <a class="navbar" id="odeljenja" href="../odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>
+    <a class="navbar" id="mojeLekcije" href="../moje-lekcije/moje-lekvije.html" style="display: none;">Moje lekcije</a>
+    <a class="navbar" id="PrijaviSE" href="../login/log.html" >Prijavi se</a>
+    <div class="navImeDiv" id="navIme"  style="display: none;"><div class="ImePrezimeDugme" id="imePrezime" onclick="odjaviDiv()"><img src="../slike/ucenik.png" class="korisnik" /></div></div>
+    <a href="../postignuca/postignuca.html" id="postignucaMob" style="display: none;"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
+    <div class="navOdjavi" id="odjaviMob" onclick="odjaviMeMob()" style="display: none;> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
+</div>
 
 
     <div class="divOdjaviSE" id="odjaviMe" style="display:none;">
@@ -39,6 +40,7 @@ let nav=`
     </div>
 </div>
 ${body}`
+
 try
 { 
     document.body.innerHTML="";
@@ -70,7 +72,7 @@ async function test()
         window.addEventListener("resize",()=>{
             if(window.innerWidth<=1070)
             {
-                document.getElementById("odjaviMob").style.display="flex";
+                document.getElementById("odjaviMob").style.display="flex"
                 document.getElementById("odjaviMe").style.display="none";
             }
             else
