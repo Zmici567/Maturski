@@ -31,10 +31,10 @@ let nav=`
 
 
     <div class="divOdjaviSE" id="odjaviMe" style="display:none;">
-        <div class="divSpic">  <img src="./slike/spic.png" class="spic"/> </div>
+        <div class="divSpic">  <img src="../slike/spic.png" class="spic"/> </div>
           <div class="odjavise"> 
             <a href="../postignuca/postignuca.html" id="postignuca"><div class="odjaviDugme" style="display: none;"><p>POSTIGNUCA</p></div></a>
-            <div class="odjaviDugme" onclick="odjaviMe()"> <img src="./slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
+            <div class="odjaviDugme" onclick="odjaviMe()"> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
           </div>
       </div>
     </div>
