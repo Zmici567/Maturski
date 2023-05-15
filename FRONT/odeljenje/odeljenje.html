@@ -26,25 +26,35 @@
     </div>
       <section class="odeljenje"><br>
         <a href="../odeljenje-lista/lista.html" class="dugmenazad"> <img src="../slike/back (1).png" class="nav-slika" style="height: 20px;" /> NAZAD</a><br><br>
-        <div class="odelj">
-          
-          
-          <div class="text"> <h4 id="text-h">Škola:</h4><h4 id="odeljenjeSkola">Gimnazija u Cupriji</h4> </div> 
-          <hr class="linija">
-         <div class="text2">  <div class="text"> <h2 id="text-h">Odeljenje:</h2><h2 id="odeljenjeNaziv">4/4</h2> </div><img src="../slike/kanta.png" class="slika-brisi" onclick="izmeniDiv()"></div>
-  
-          
-
-        </div>
-        <div class="div-ucenici">
-          <div class="dugmici">
-          <a href="../ranglista/ranglista.html"><button class="rang"><p>Rang lista učenika</p><img src="../slike/rang.png" class="slika-dugme"></button></a>
-          <button class="dodaj" onclick="dodajUcenikaDiv()"><p>Dodaj učenika</p><img src="../slike/plus..png" class="slika-dugme"></button>
+       
+       
+        <div class="odelj">     
+            <div class="text"> <h4 id="text-h">Škola:</h4><h4 id="odeljenjeSkola">Gimnazija u Cupriji</h4> </div> 
+            <hr class="linija">
+          <div class="text2">  
+            <div class="text"> 
+              <h2 id="text-h">Odeljenje:</h2><h2 id="odeljenjeNaziv">4/4</h2> 
+            </div>
+            <div class="ikonicice" >
+              <div >
+                <img src="../slike/kanta.png" class="slika-brisi" onclick="brisiOdeljenje(location.search.substring(1))">
+              </div>
+              <div>
+                <img src="../slike/edit.png" class="slika-edit" onclick="izmeniDiv()">
+              </div>
+            </div> 
           </div>
-          <div class="ucenici" id ="container"> 
-            
-          </div>
         </div>
+          
+          <div class="div-ucenici">
+            <div class="dugmici">
+            <a href="../ranglista/ranglista.html"><button class="rang"><p>Rang lista učenika</p><img src="../slike/rang.png" class="slika-dugme"></button></a>
+            <button class="dodaj" onclick="dodajUcenikaDiv()"><p>Dodaj učenika</p><img src="../slike/plus..png" class="slika-dugme"></button>
+            </div>
+            <div class="ucenici" id ="container"> 
+              
+            </div>
+          </div>
 
         
       </section>
@@ -79,18 +89,19 @@
         <div class="div-dodaj">
         <h1>IZMENI PODATKE</h1>
         <div class="inputGroup">
-            <input type="text" required="" autocomplete="off">
+            <input type="text" required="" autocomplete="off" id="editSkola" >
             <label for="name">Škola</label>
         </div>
         <div class="inputGroup">
-            <input type="text" required="" autocomplete="off">
+            <input type="text" required="" autocomplete="off" id="editOdeljenje">
             <label for="name">Odeljenje</label>
         </div>
-        <div class="dodaj-u">
+        <div class="dodaj-u" onclick="izmeniOdeljenje()" >
           <p>Izmeni</p>
         </div>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../index.js"></script>
     <script src="./odeljenje.js"></script>

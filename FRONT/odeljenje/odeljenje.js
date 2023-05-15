@@ -11,6 +11,18 @@ async function dodajUcenikaDivNone(){
 async function izmeniDiv(){
 
     document.getElementById("izmeniDiv").style.display="block";
+    
+
+    let id=location.search.substring(1)
+    let res=await axios.get(LINK+"/api/odeljenje/"+id)
+    console.log(res);
+
+    if(res.data.uspesnost)
+    {
+        let odeljenje = res.data.odeljenje;
+        document.getElementById("editSkola").value=odeljenje.skola;
+        document.getElementById("editOdeljenje").value=odeljenje.naziv;
+    }
 }
 
 async function izmeniNone(){
@@ -120,4 +132,42 @@ async function obrisiUcenika(id)
             await ucitajOdeljenje();
         }
     }
+}
+
+async function brisiOdeljenje(id)
+{
+    if(confirm("Da li ste sigurni da zelite da obrisete odeljenje?")===true)
+    {
+        let res = await axios.delete(LINK+"/api/odeljenje/"+id);
+        if(res.data.uspesnost)
+        {
+            location.href="../odeljenje-lista/lista.html";
+        }
+    }
+}
+
+async function izmeniOdeljenje()
+{
+    let skola= document.getElementById("editSkola").value
+    let odeljenje=document.getElementById("editOdeljenje").value
+
+    let id=location.search.substring(1)
+
+        let Odeljenje={
+            skola:skola,
+            naziv:odeljenje
+        }
+        console.log("izmeni odeljenje")
+        var res=await axios.put(LINK + "/api/odeljenje/"+id,Odeljenje);
+        console.log(res)  
+        if(res.data.uspesnost)
+        {
+            document.getElementById("izmeniDiv").style.display="none";
+            await ucitajOdeljenje();
+        }
+        else
+        {
+            document.getElementById("izmeniDiv").style.display="none";
+        }
+
 }
