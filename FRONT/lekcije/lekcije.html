@@ -19,41 +19,7 @@
 </head>
 <body>
     <!----------------------------------- ======= Navbar ======= -------------------------------------------->
-    <div class="nav">
-      <input type="checkbox" id="nav-check">
-      <div class="nav-header">
-        <div class="nav-title">
-          <img src="../slike/g109.png" class="nav-slika" style="height: 60px;" />
-        </div>
-      </div>
 
-      <div class="nav-btn">
-        <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-      
-      <div class="nav-links">
-        <a class="navbar " href="../index.html" >Početna</a>
-        <a class="navbar activ" href="lekcije.html">Lekcije</a>
-        <a class="navbar" href="../odeljenje-lista/lista.html" >Odeljenja</a>
-        <a class="navbar" href="../postignuca/postignuca.html" >Postignuća</a>
-        <a class="navbar" href="../moje-lekcije/moje-lekvije.html" >Moje lekcije</a>
-        <div class="navImeDiv" id="navIme"  style="display: none;"><button class="ImePrezimeDugme" id="imePrezime" onclick="odjavi()">Ime i prezime</button></div>
-        <a href="../postignuca/postignuca.html"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
-        <div class="navOdjavi" id=""> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
-      </div>
-
-      <div class="divOdjaviSE">
-        <div class="divSpic">  <img src="../slike/spic.png" class="spic"/> </div>
-          <div class="odjavise"> 
-            <a href="../postignuca/postignuca.html"><div class="odjaviDugme"><p>POSTIGNUCA</p></div></a>
-            <div class="odjaviDugme"> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
-          </div>
-      </div>
-    </div>
  <!-- ---------------------------------------lekcije---------------------------------------------------- -->
 
  <div class="pozadina">
@@ -169,6 +135,8 @@
   </section>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../index.js"></script>
+  <script src="../nav.js"></script>
+  <script src="lekcije.js"></script>
 </body>
 </html>
 

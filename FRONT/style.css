@@ -166,7 +166,8 @@ a:hover{
     font-size: 20px;
     margin-left: 0;
     font-weight: 700;
-    border: none;
+    border-left: 2px solid #FBF4E9;
+    padding-left:10px ;
   }
   .ImePrezimeDugme:hover{
     color: #EC9CD3;
@@ -182,7 +183,7 @@ a:hover{
   .divSpic{
     display: flex;
     justify-content: flex-end;
-    margin-right: 60px;
+    margin-right: 30px;
   }
   .spic{
     width: 20px;
@@ -196,6 +197,7 @@ a:hover{
     justify-content: center;
     flex-direction: column;
     border-radius: 15px;
+    box-shadow: 1px 1px 10px #002905;
   }
 
   .odjaviDugme{
@@ -218,6 +220,10 @@ a:hover{
   }
   .odjavi{
     width: 25px;
+  }
+  .korisnik{
+    width: 25px;
+    margin-right: 5px;
   }
   .navOdjavi{
     display: none;
@@ -297,6 +303,9 @@ a:hover{
       background-color: #fbf4e9aa;
       border: 2px solid #f471cb;
       color: #6ECB63;
+    }
+    .ImePrezimeDugme:hover{
+      color: #FBF4E9;
     }
   }
 
