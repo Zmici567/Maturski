@@ -11,6 +11,7 @@
   padding-right: 50px;
   display: flex;
   justify-content: center;
+  height: 70px;
 }
 .dodaj-odeljenje:hover{
   text-decoration: none;

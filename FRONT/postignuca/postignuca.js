@@ -1,6 +1,12 @@
 async function izmeniUcenika(){
 
     document.getElementById("izmeniDiv").style.display="block";
+    let id = location.search.substring(1);
+    console.log(id);
+    let res = await axios.get(LINK+"/api/getOne/"+id);
+    let ucenik = res.data.user;
+    document.getElementById("ImeUcenikEdit").value=ucenik.imeIprezime;
+    document.getElementById("sifraUcenikEdit").value=ucenik.password;
 }
 
 async function izmeniUcenikaNone(){
@@ -48,6 +54,34 @@ async function ucitaj()
         else if(user.tip === 1)
         {
             document.getElementById("nazad").href="../index.html";
+            document.getElementById("dugmeEditUcenik").style.display="none"
         }
     }
+}
+
+async function UcenikIzmeni()
+{
+    let ime= document.getElementById("ImeUcenikEdit").value
+    let sifra=document.getElementById("sifraUcenikEdit").value
+
+    let id = location.search.substring(1);
+
+        let Ucenik={
+            imeIprezime:ime,
+            password:sifra
+        }
+        console.log(Ucenik)
+        var res=await axios.put(LINK + "/api/ucenik/podaci/"+id,Ucenik);
+        console.log(res) 
+         
+        if(res.data.uspesnost)
+        {
+            document.getElementById("izmeniDiv").style.display="none";
+            await ucitaj();
+        }
+        else
+        {
+            document.getElementById("izmeniDiv").style.display="none";
+        }
+
 }

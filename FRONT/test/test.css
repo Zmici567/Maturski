@@ -96,7 +96,7 @@
 .odgovor h3{
     margin-right: 10px;
 }
-.kraj-testa{
+.kraj-testa, .sledece-pitanje{
     display: none;
     justify-content: center;
     flex-direction: column;
@@ -139,7 +139,7 @@
     border-radius: 50%;
   }
 
-  .kraj{
+  .kraj, .tacni-netacno{
     background-color: #FBF4E9;
     box-shadow: 1px 1px 25px #000000;
     color: #6ECB63;

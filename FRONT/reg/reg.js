@@ -4,80 +4,90 @@ async function registrujSE()
     try
     {
 
+    
         let ImeIPrezime = document.getElementById("IiP").value;
         let email = document.getElementById("email").value;
         let pass = document.getElementById("pass").value;
         let cpass = document.getElementById("cpass").value;
-
-        if(ImeIPrezime==="")
+        let kod = document.getElementById("profKod").value;
+        if(kod==="12345")
         {
-            document.getElementById("tika spic").innerHTML="Niste uneli Ime i Pezime!!!"
-        }
-        else if(email==="")
-        {
-            document.getElementById("tika spic").innerHTML="Niste uneli Email!!!"
-        }
-        else if(pass === "")
-        {
-            document.getElementById("tika spic").innerHTML="Niste uneli sifru!!!"
-        }
-        else if(pass!==cpass)
-        {
-            document.getElementById("tika spic").innerHTML="Sifre se ne poklapaju!!!";
-        }
-        else if(!email.includes('@'))
-        {
-            document.getElementById("tika spic").innerHTML="Email nije validan!!!";
-        }
-        else if(pass.length<8)
-        {
-            document.getElementById("tika spic").innerHTML="Sifra ima manje od 8 karaktera!!!";
-        }
-        else
-        {
-            let t=false;
-            let u=false;
-            let v=false;
-            for(let i=0;i<pass.length;i++) 
+            if(ImeIPrezime==="")
             {
-                let element=pass.charCodeAt(i);
-                if(element>=97 && element<=122)
-                {
-                    t=true;
-                }
-                else if(element>=65 && element<=90)
-                {
-                    u=true;
-                }
-                else if(element>=48 && element<=57)
-                {
-                    v=true;
-                }
+                document.getElementById("tika spic").innerHTML="Niste uneli Ime i Pezime!!!"
             }
-            if((!t || !u || !v ) && false)
+            else if(email==="")
             {
-                document.getElementById("tika spic").innerHTML="Sifra nije dovoljno sigurna";
+                document.getElementById("tika spic").innerHTML="Niste uneli Email!!!"
+            }
+            else if(pass === "")
+            {
+                document.getElementById("tika spic").innerHTML="Niste uneli sifru!!!"
+            }
+            else if(pass!==cpass)
+            {
+                document.getElementById("tika spic").innerHTML="Sifre se ne poklapaju!!!";
+            }
+            else if(!email.includes('@'))
+            {
+                document.getElementById("tika spic").innerHTML="Email nije validan!!!";
+            }
+            else if(pass.length<8)
+            {
+                document.getElementById("tika spic").innerHTML="Sifra ima manje od 8 karaktera!!!";
             }
             else
             {
-                let res = (await axios.post(LINK+"/api/Profesor",{
-                    imeIprezime:ImeIPrezime,
-                    password:pass,
-                    email:email
-                })).data;
-                if(res.uspesnost)
+                let t=false;
+                let u=false;
+                let v=false;
+                for(let i=0;i<pass.length;i++) 
                 {
-                    localStorage.setItem("id",res.sacuvano._id)
-                    location.href="/";
+                    let element=pass.charCodeAt(i);
+                    if(element>=97 && element<=122)
+                    {
+                        t=true;
+                    }
+                    else if(element>=65 && element<=90)
+                    {
+                        u=true;
+                    }
+                    else if(element>=48 && element<=57)
+                    {
+                        v=true;
+                    }
+                }
+                if((!t || !u || !v ) && false)
+                {
+                    document.getElementById("tika spic").innerHTML="Sifra nije dovoljno sigurna";
                 }
                 else
                 {
-                    document.getElementById("tika spic").innerHTML=res.message;
+                    let res = (await axios.post(LINK+"/api/Profesor",{
+                        imeIprezime:ImeIPrezime,
+                        password:pass,
+                        email:email
+                    })).data;
+                    if(res.uspesnost)
+                    {
+                        localStorage.setItem("id",res.sacuvano._id)
+                        location.href="/";
+                    }
+                    else
+                    {
+                        document.getElementById("tika spic").innerHTML=res.message;
+                    }
                 }
             }
+           
+        }
+        else
+        {
+            document.getElementById("tika spic").innerHTML="Kod za profesora nije ispravans";
+        }
+
         }
        
-    }
     catch(err)
     {
         console.log(err);

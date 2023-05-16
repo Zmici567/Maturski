@@ -18,7 +18,7 @@
     <link href="lekcija-forma.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="ucitajFormuLekcije()">
     <div class="pozadinaa">
         <img src="../slike/poz3.jpg">
     </div>
@@ -29,77 +29,34 @@
     <div class="log"> <br>
         <h1>Kreiraj lekciju</h1> <br><br>
         <p class="label">Tema lekcije:</p>
-        <textarea class="box" type='text'></textarea>
+        <textarea class="box" type='text' id="naslovLekcije"></textarea>
 
         <p class="label">Lekcija:</p>
-        <textarea class="box2 " type='text'></textarea>
+        <textarea class="box2" type='text' id="textLekcije"></textarea>
+
+        <p class="label">Ubaci sliku:</p>
+        <input type="file" id="slikaZaLekciju">
+
         <h2>Kreiraj test</h2> 
-        <div class="pitanja">
-            <div class="pitanje">
-                <p class="label">Pitanje 1:</p>
-                <textarea class="box4" type='text'></textarea>
-                <div class="odgovor">
-                    <div class="tacno">
-                        <input type="radio" id="cbx1" style="display: none;" name="odgovor1">
-                        <label for="cbx1" class="check"  >
-                            <svg width="18px" height="18px" viewBox="0 0 18 18">
-                                <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
-                                <polyline points="1 9 7 14 15 4"></polyline>
-                            </svg>
-                        </label>
-                    </div>
-                    <div class="box-odg">
-                        <p class="label">Odgovor 1:</p>
-                        <textarea class="box3" type='text'></textarea>
-                    </div>
-                </div>
-                <div class="odgovor">
-                    <div class="tacno">
-                        <input type="radio" id="cbx2" style="display: none;"  name="odgovor1">
-                        <label for="cbx2" class="check">
-                            <svg width="18px" height="18px" viewBox="0 0 18 18">
-                                <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
-                                <polyline points="1 9 7 14 15 4"></polyline>
-                            </svg>
-                        </label>
-                    </div>
-                    <div class="box-odg">
-                        <p class="label">Odgovor 2:</p>
-                        <textarea class="box3" type='text'></textarea>
-                    </div>
-                </div>
-                <div class="odgovor">
-                    <div class="tacno">
-                        <input type="radio" id="cbx3" style="display: none;"  name="odgovor1">
-                        <label for="cbx3" class="check">
-                            <svg width="18px" height="18px" viewBox="0 0 18 18">
-                                <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
-                                <polyline points="1 9 7 14 15 4"></polyline>
-                            </svg>
-                        </label>
-                    </div>
-                    <div class="box-odg">
-                        <p class="label">Odgovor 3:</p>
-                        <textarea class="box3" type='text'></textarea>
-                    </div>
-                </div>
 
-            </div>
-
-            <div class="dodaj-pitanje"> 
+      
+        <div class="pitanja" id="pitanjaCont">
+            <section id="svaPitanja"></section>
+            <div class="dodaj-pitanje" onclick="dodajPitanje()"> 
                 <img src="../slike/plusp.png" class="plus"><p class="dodaj-p">Dodaj pitanje</p> 
             </div> <br>
+
         </div>
 
-
-        <div class="postavi"  onclick="prijaviSE()">
+        <label id="tika spic"></label> <br>
+        <div class="postavi"  onclick="postavi()">
             <p>Postavi lekciju</p>
         </div>
     </div>
    </div>
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="../index.js"></script>
-   <script src="./log.js"></script>
+   <script src="./lekcija-forma.js"></script>
 
 </body>
 </html>

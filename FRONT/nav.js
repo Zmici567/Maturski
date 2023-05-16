@@ -135,4 +135,5 @@ function odjaviDiv()
 function odjaviMe(){
     localStorage.removeItem("id");
     location.reload();
+    location.href="/";
 }

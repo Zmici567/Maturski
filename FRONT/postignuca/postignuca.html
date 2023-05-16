@@ -30,7 +30,14 @@
 
       <div class="ime"> 
         <hr class="linija">
-      <div class="text2">  <div class="text"> <h2 id="text-h">Ime i prezime</div> <img src="../slike/edit.png" class="slika-edit" onclick="izmeniUcenika()" > </div>
+      <div class="text2"> 
+         <div class="text">
+           <h2 id="text-h">Ime i prezime</h2>
+
+           </div> <div onclick="izmeniUcenika()" id="dugmeEditUcenik" style="display: flex; align-items: center;">
+            <img src="../slike/edit.png" class="slika-edit"  > 
+          </div> 
+        </div>
       <hr class="linija">
         
 
@@ -56,19 +63,21 @@
       <div class="div-dodaj">
       <h1>IZMENI PODATKE</h1>
       <div class="inputGroup">
-          <input type="text" required="" autocomplete="off">
+          <input type="text" required="" autocomplete="off" id="ImeUcenikEdit">
           <label for="name">Ime i prezime</label>
       </div>
       <div class="inputGroup">
-          <input type="text" required="" autocomplete="off">
+          <input type="text" required="" autocomplete="off" id="sifraUcenikEdit">
           <label for="name">Šifra</label>
       </div>
-      <div class="izmeni">
+      <div class="izmeni" onclick="UcenikIzmeni()">
         <p>Izmeni</p>
       </div>
     </div>
   </div>
   
+
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../index.js"></script>
   <script src="postignuca.js"></script>

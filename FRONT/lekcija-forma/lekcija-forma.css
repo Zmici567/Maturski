@@ -55,7 +55,7 @@
 .log h2{
    text-align: left;
    margin-left: 10%;
-   margin-top: 20px;
+   margin-top: 50px;
    color: #EC9CD3;
 }
 .label{
@@ -63,7 +63,15 @@
     margin-left: 12%;
     margin-bottom: 3px;
     color: #EC9CD3;
+    margin-top: 30px;
     }
+
+.labelp{
+  text-align: left;
+  margin-left: 12%;
+  margin-bottom: 3px;
+  color: #EC9CD3;
+  }
     
 
 .postavi{
@@ -151,7 +159,13 @@ margin-bottom: 0px;
     margin-left: 10%;
     margin-top: 15px;
 }
-
+.linija {
+  width: 100%;
+  color: #EC9CD3;
+  background-color: #EC9CD3;
+  height: 2px;
+  margin:0;
+}
 .plus{
     width: 40px;
     margin-top: 0;
@@ -235,51 +249,21 @@ margin-bottom: 0px;
     stroke: var(--accent-color, #a3e583);
   }
 
-  #cbx1:checked + .check svg {
+  .cbx1:checked + .check svg {
     stroke: var(--accent-color, #a3e583);
   }
   
-  #cbx1:checked + .check svg path {
+  .cbx1:checked + .check svg path {
     stroke-dashoffset: 60;
     transition: all 0.3s linear;
   }
   
-  #cbx1:checked + .check svg polyline {
+  .cbx1:checked + .check svg polyline {
     stroke-dashoffset: 42;
     transition: all 0.2s linear;
     transition-delay: 0.15s;
   }
   
-  #cbx2:checked + .check svg {
-    stroke: var(--accent-color, #a3e583);
-  }
-  
-  #cbx2:checked + .check svg path {
-    stroke-dashoffset: 60;
-    transition: all 0.3s linear;
-  }
-  
-  #cbx2:checked + .check svg polyline {
-    stroke-dashoffset: 42;
-    transition: all 0.2s linear;
-    transition-delay: 0.15s;
-  }
-
-
-  #cbx3:checked + .check svg {
-    stroke: var(--accent-color, #a3e583);
-  }
-  
-  #cbx3:checked + .check svg path {
-    stroke-dashoffset: 60;
-    transition: all 0.3s linear;
-  }
-  
-  #cbx3:checked + .check svg polyline {
-    stroke-dashoffset: 42;
-    transition: all 0.2s linear;
-    transition-delay: 0.15s;
-  }
 
 
  @media (max-width:900px) {

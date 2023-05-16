@@ -291,7 +291,7 @@
       }
     }
   
-    @media (max-width: 500px){
+    @media (max-width: 800px){
       .div-edit{
         width: 100%;
       }
