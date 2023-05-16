@@ -167,7 +167,7 @@ async function UcenikPromenaPodataka(req,res)
     try
     {
         let id = req.params.id;
-        let imeIPrezime = req.body.imeIPrezime;
+        let imeIPrezime = req.body.imeIprezime;
         let password = req.body.password;
 
         let ucenik = await USER.findById(id);
