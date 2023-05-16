@@ -45,6 +45,7 @@ app.get("/api/getOne/:id",user.getOneUser);
 app.put("/api/ucenik/podaci/:id",user.UcenikPromenaPodataka);
 app.put("/api/ucenik/bodovi/:id",user.promenaBodova);
 app.put("/api/ucenik/dodajLekciju/:id", user.dodavanjeLekcije)
+app.get("/api/rangLista/:idOdeljenja", user.rangLitaSort)
 
 app.get("/api/odeljenja/:id_profesora",odeljenje.get);
 app.post("/api/odeljenje",odeljenje.post);
