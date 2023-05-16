@@ -14,6 +14,7 @@ body{
     justify-content: space-evenly;
     background-color: #FBF4E9 ;
     padding: 0;
+    min-height: 800px;
 }
 a:hover{
   text-decoration: none;
@@ -120,7 +121,7 @@ a:hover{
     color: #EC9CD3;
   }
    .activ {
-    color: #f471cb;
+    color: #EC9CD3;
   } 
     /**
   .nav > .nav-links > a:hover {
@@ -325,6 +326,9 @@ a:hover{
   width: 100%;
   position:relative;
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .footer{
   background-color: #6ECB63;
@@ -348,10 +352,12 @@ a:hover{
 
 .kon{
     margin: 10px;
+    width: 60px;
+    padding: 5px;
 }
 
 .kon:hover{
     background-color:#FBF4E9 ;
     border-radius:500% ;
-    padding: 5px;
+   
 }
