@@ -171,3 +171,5 @@ async function izmeniOdeljenje()
         }
 
 }
+
+document.getElementById("jebenilink").href+="?"+location.search.substring(1);

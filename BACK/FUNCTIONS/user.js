@@ -179,7 +179,7 @@ async function UcenikPromenaPodataka(req,res)
     try
     {
         let id = req.params.id;
-        let imeIPrezime = req.body.imeIPrezime;
+        let imeIPrezime = req.body.imeIprezime;
         let password = req.body.password;
 
         let ucenik = await USER.findById(id);
@@ -232,6 +232,32 @@ async function dodajLekciju(req,res)
         let lekcija = req.body.lekcija;
         let ucenik = await USER.findById(id);
         ucenik.uradjeneLekcije.push(lekcija);
+        res.json({
+            uspesnost:true
+        })
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            message:err.message
+        })
+    }
+}
+
+async function RangLitaSort(req,res)
+{
+    try
+    {
+        let id_Odeljenja=req.params.idOdeljenja;
+        let ucenici = await USER.find({idOdeljenja:id_Odeljenja})
+        let ucenici_s_bodovi = ucenici.sort((a,b)=>b.bodovi-a.bodovi);
+        
+
+        res.json({
+            uspesnost:true,
+            users:ucenici_s_bodovi
+        })
     }
     catch(err)
     {
@@ -252,4 +278,5 @@ module.exports = (new Object({
     UcenikPromenaPodataka:UcenikPromenaPodataka,
     promenaBodova:bodovi,
     dodavanjeLekcije:dodajLekciju,
+    rangLitaSort:RangLitaSort
 }))
