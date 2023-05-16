@@ -208,8 +208,14 @@ async function bodovi(req,res)
         let bodovi = req.body.bodovi;
         
         let ucenik = await USER.findById(id);
-        ucenik.bodovi+=bodovi;
-        let saved=ucenik.save();
+        let saved={}
+        if(ucenik.tip===1)
+        {
+            ucenik.brojBodova+=bodovi;
+            saved=await ucenik.save();
+        }
+        
+        
         res.json({
             uspesnost:true,
             saved:saved
@@ -231,7 +237,12 @@ async function dodajLekciju(req,res)
         let id = req.params.id;
         let lekcija = req.body.lekcija;
         let ucenik = await USER.findById(id);
-        ucenik.uradjeneLekcije.push(lekcija);
+        
+        if(ucenik.tip===1)
+        {
+            ucenik.uradjeneLekcije.push(lekcija);
+            ucenik.save();
+        }
         res.json({
             uspesnost:true
         })

@@ -18,22 +18,22 @@
     <link href="test.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="load()">
     <div class="pozadinaa">
         <img src="../slike/poz3.jpg">
     </div>
     
    <div class="pozadina">
     <br>
-    <a href="../lekcija-test/lekcija-test.html" class="dugmenazad"> <img src="../slike/back (1).png" class="nav-slika" style="height: 20px; margin-right: 10px;" />Napusti test</a><br>
+    <a href="../lekcija-test/lekcija-test.html" id="nazad" class="dugmenazad"> <img src="../slike/back (1).png" class="nav-slika" style="height: 20px; margin-right: 10px;" />Napusti test</a><br>
     <div class="log"> <br>
-        <h3>1. bla bla bla bla bla bla bla bla</h3> <br>
+        <h3 id="pitanje">1. bla bla bla bla bla bla bla bla</h3> <br>
         <hr class="linija">
         <div class="odgovori">
             <br>
-            <div class="odgovor"><h3>A)</h3> <h4>kakakakkkc aknjkcnjd jdhabdaj hsbs </h4></div>
-            <div class="odgovor"><h3>B)</h3> <h4>kakakakkkc aknjkcnjd jdhabdaj hsbs </h4></div>
-            <div class="odgovor"><h3>C)</h3> <h4>kakakakkkc aknjkcnjd jdhabdaj hsbs </h4></div>
+            <div class="odgovor" onclick="odgovor(0)"><h3>A)</h3> <h4 id="odgovor1">kakakakkkc aknjkcnjd jdhabdaj hsbs </h4></div>
+            <div class="odgovor" onclick="odgovor(1)"><h3>B)</h3> <h4 id="odgovor2">kakakakkkc aknjkcnjd jdhabdaj hsbs </h4></div>
+            <div class="odgovor" onclick="odgovor(2)"><h3>C)</h3> <h4 id="odgovor3">kakakakkkc aknjkcnjd jdhabdaj hsbs </h4></div>
             <br>
         </div>
         <br><br>
@@ -41,25 +41,26 @@
     <br><br><br>
    </div>
 
-   <div class="kraj-testa" >
-    <div class="x"><div class="x-img"><img src="../slike/x-mark.png" alt=""></div></div>
+   <div class="kraj-testa" id="kraj">
+    <div class="x" onclick="izadji()"><div class="x-img"><img src="../slike/x-mark.png" alt=""></div></div>
         <div class="kraj">
-            <h1>Test je zavrsen</h1>
+            <h1 id="greskaT">Test je zavrsen</h1>
             <hr class="linija">
-          <div class="bodovi"><h2>Broj bodova: </h2><h2 class="bodovii">100</h2> </div><br>
+          <div class="bodovi" id="greskaB"><h2>Broj bodova: </h2><h2 class="bodovii" id="bodovi">100</h2> </div><br>
         </div>
         <br>
    </div>
 
-   <div class="sledece-pitanje">
-    <div class="x"><div class="x-img"><img src="../slike/x-mark.png" alt=""></div></div>
+   <div class="sledece-pitanje" id="teraj">
+    
         <div class="tacni-netacno">
-           <h1>Tacan odgovor</h1>
+           <h1 id="TN">Tacan odgovor</h1>
         </div>
         <br>
    </div>
 
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   <script src="./log.js"></script>
+   <script src="../index.js"></script>
+   <script src="./test.js"></script>
 </body>
 </html>
