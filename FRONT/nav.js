@@ -19,14 +19,13 @@ let nav=`
 
     <div class="nav-links">
     <a class="navbar" id="pocetna" href="../index.html"  >Početna</a>
-    <a class="navbar" id="oNama" href="#onama" >O nama</a>
     <a class="navbar" id="lekcije" href="../lekcije/lekcije.html">Lekcije</a>
     <a class="navbar" id="odeljenja" href="../odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>
     <a class="navbar" id="mojeLekcije" href="../moje-lekcije/moje-lekvije.html" style="display: none;">Moje lekcije</a>
     <a class="navbar" id="PrijaviSE" href="../login/log.html" >Prijavi se</a>
     <div class="navImeDiv" id="navIme"  style="display: none;"><div class="ImePrezimeDugme" id="imePrezime" onclick="odjaviDiv()"><img src="../slike/ucenik.png" class="korisnik" /></div></div>
     <a href="../postignuca/postignuca.html" id="postignucaMob" style="display: none;"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
-    <div class="navOdjavi" id="odjaviMob" onclick="odjaviMeMob()" style="display: none;> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
+    <div class="navOdjavi" id="odjaviMob" onclick="odjaviMe()" style="display: none;> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
 </div>
 
 
@@ -40,6 +39,7 @@ let nav=`
     </div>
 </div>
 ${body}`
+
 
 try
 { 
@@ -135,5 +135,5 @@ function odjaviDiv()
 function odjaviMe(){
     localStorage.removeItem("id");
     location.reload();
-    location.href="/";
+    location.href="/"
 }

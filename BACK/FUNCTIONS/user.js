@@ -262,8 +262,9 @@ async function RangLitaSort(req,res)
     {
         let id_Odeljenja=req.params.idOdeljenja;
         let ucenici = await USER.find({idOdeljenja:id_Odeljenja})
-        let ucenici_s_bodovi = ucenici.sort((a,b)=>b.bodovi-a.bodovi);
-        
+        console.log(ucenici);
+        let ucenici_s_bodovi = await ucenici.sort((a,b)=>b.brojBodova-a.brojBodova);
+        console.log(ucenici);
 
         res.json({
             uspesnost:true,
