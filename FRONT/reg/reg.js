@@ -10,8 +10,8 @@ async function registrujSE()
         let pass = document.getElementById("pass").value;
         let cpass = document.getElementById("cpass").value;
         let kod = document.getElementById("profKod").value;
-        if(kod==="12345")
-        {
+        
+        
             if(ImeIPrezime==="")
             {
                 document.getElementById("tika spic").innerHTML="Niste uneli Ime i Pezime!!!"
@@ -66,7 +66,8 @@ async function registrujSE()
                     let res = (await axios.post(LINK+"/api/Profesor",{
                         imeIprezime:ImeIPrezime,
                         password:pass,
-                        email:email
+                        email:email,
+                        kod:kod
                     })).data;
                     if(res.uspesnost)
                     {
@@ -81,12 +82,8 @@ async function registrujSE()
             }
            
         }
-        else
-        {
-            document.getElementById("tika spic").innerHTML="Kod za profesora nije ispravans";
-        }
 
-        }
+        
        
     catch(err)
     {
