@@ -39,17 +39,29 @@ async function postProfesor(req,res)
 {
     try
     {
-        let ucenik = new USER({
-            tip:0,
-            imeIprezime:req.body.imeIprezime,
-            password:req.body.password,
-            email:req.body.email
-        })
-        let saved = await ucenik.save();
-        res.json({
-            uspesnost:true,
-            sacuvano:saved
-        })
+        let kod=req.body.kod;
+        if(kod==="12345")
+        {
+            let ucenik = new USER({
+                tip:0,
+                imeIprezime:req.body.imeIprezime,
+                password:req.body.password,
+                email:req.body.email,
+            })
+            let saved = await ucenik.save();
+            res.json({
+                uspesnost:true,
+                sacuvano:saved
+            })
+        }
+        else
+        {
+            res.json({
+                uspesnost:false,
+                message:"Neispravan kod"
+            })
+        }
+        
     }
     catch(err)
     {

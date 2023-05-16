@@ -65,12 +65,13 @@ async function post(req,res)
 {
     try
     {
+        console.log(req.body.pitanja);
         let newLekcija = new LEKCIJA({
             naziv:req.body.naziv,
             slika:req.file.filename,
             tekst:req.body.tekst,
             idProfesora:req.body.idProfesora,
-            pitanja:pitanja,
+            pitanja:JSON.parse(req.body.pitanja),
         })
         let saved = await newLekcija.save();
         res.json({

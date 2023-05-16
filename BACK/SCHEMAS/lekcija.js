@@ -6,7 +6,7 @@ let pitanjeSchema=new mg.Schema({
         required: true,
         trim: true
     },
-    odgovor1: [{
+    odgovori: [{
         type: String,
         required: true,
         trim: true

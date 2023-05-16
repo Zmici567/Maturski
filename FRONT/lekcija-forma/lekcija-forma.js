@@ -3,6 +3,8 @@ async function postavi()
     let naslov=document.getElementById("naslovLekcije").value;
     let lekcija= document.getElementById("textLekcije").value;
     let slika= document.getElementById("slikaZaLekciju").value;
+    let idProfesora=localStorage.getItem("id");
+    console.log(slika);
 
 //     for(let i=1;i<=brojPitanja;i++){
 //         let pitanje={
@@ -18,7 +20,7 @@ async function postavi()
     {
         document.getElementById("tika spic").innerHTML="Niste uneli temu lekcije!!"
     }
-    else if(lekcije==="")
+    else if(lekcija==="")
     {
         document.getElementById("tika spic").innerHTML="Niste uneli text lekcije!!"
     }
@@ -28,19 +30,62 @@ async function postavi()
     }
     else
     {
-        let res = (await axios.post(LINK+"/api/lekcija",{
-            naziv:naslov,
-            tekst:lekcija,
+        let pitanja=[];
+
+        for(let i=1;i<brojPitanja;i++)
+        {
+            console.log(i)
+            let tekst = document.getElementById("textPitanja"+i).value;
+            let odgovor1 = document.getElementById("odgovor1"+i).value;
+            let odgovor2 = document.getElementById("odgovor2"+i).value;
+            let odgovor3 = document.getElementById("odgovor3"+i).value;
+
+            let tacanOdgovor = (document.getElementById("cbx1"+i).checked?0:(document.getElementById("cbx2"+i).checked?1:document.getElementById("cbx3"+i)?2:-1));
+
+            if(tekst === "" || odgovor1==="" || odgovor2==="" || odgovor3==="" || tacanOdgovor===-1)
+            {
+                continue;
+            }
+            else
+            {
+                pitanja.push({
+                    tekst: tekst,
+                    tacanOdgovor:tacanOdgovor,
+                    odgovori:[odgovor1,odgovor2,odgovor3]
+                });
+            }
+            
+        }
+
+        let formData = new FormData();
+
+        let file=document.getElementById("slikaZaLekciju").files[0];
+
+        formData.append("naziv",naslov);
+        formData.append("tekst",lekcija);
+        formData.append("slika",file);
+        formData.append("idProfesora",idProfesora);
+        formData.append("pitanja",JSON.stringify(pitanja));
+
+        console.log(formData);
+
+        let res = (await axios.post(LINK+"/api/lekcija",formData,{
+            headers:{
+                'Content-Type': 'multipart/form-data'
+            }
         })).data;
+        console.log(res);
         if(res.uspesnost)
         {
-            location.href="../lekcije/lekcije.html";
+            location.href="../moje-lekcije/moje-lekvije.html";
         }
         else
         {
             document.getElementById("tika spic").innerHTML=res.message;
         }
     }
+
+
 }
 
 let brojPitanja=1;
