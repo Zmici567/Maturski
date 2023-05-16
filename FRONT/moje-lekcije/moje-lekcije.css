@@ -1,8 +1,12 @@
+body{
+    display: block;
+    width: 100%;
+}
 .dodaj-lekciju{
     background-color: #6dcb63a6;
     border: 3px solid #6ECB63;
     color: #FBF4E9;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-right: 20px;
     margin-left: auto;
     margin-bottom: 10px;
@@ -13,6 +17,7 @@
     padding-right: 50px;
     display: flex;
     justify-content: center;
+    width: 350px;
   }
   .dodaj-lekciju:hover{
     text-decoration: none;
@@ -87,7 +92,7 @@
 
 .naslov-kartice{
  width: 100%;
- padding: 20px 20px 10px 20px;
+ padding: 20px 20px 25px 20px;
 }
 .naslov{
     height: 80%;
@@ -165,14 +170,17 @@
 .ikonice{
     width: 110px;
     display: flex;
+    justify-content: center;
     background-color: #FBF4E9;
     margin-left: auto;
     flex-direction: row-reverse;
     padding: 5px;
     border-radius: 10px;
-    justify-content: center;
     margin-bottom: 10px;
-    margin-bottom: 15px;
+}
+.ikonice:hover{
+    background-color: #ace7a6a3;
+    border: 2px solid #e77cc5;
 }
 .ikonica1{
     margin-right: 0;
@@ -188,12 +196,12 @@
     border-radius: 5px;
     margin-right: 0;
 }
-
-.ikonica2:hover{
+/* 
+.ikonica2{
     padding: 5px;
     border: 2px solid #EC9CD3;
     border-radius: 5px;
-}
+} */
 
 
 @media (max-width: 1000px) {
