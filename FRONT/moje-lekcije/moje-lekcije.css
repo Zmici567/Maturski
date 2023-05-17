@@ -1,12 +1,12 @@
-body{
+/* body{
     display: block;
     width: 100%;
-}
+} */
 .dodaj-lekciju{
     background-color: #6dcb63a6;
     border: 3px solid #6ECB63;
     color: #FBF4E9;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-right: 20px;
     margin-left: auto;
     margin-bottom: 10px;
@@ -17,7 +17,9 @@ body{
     padding-right: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 350px;
+    height: 60px;
   }
   .dodaj-lekciju:hover{
     text-decoration: none;

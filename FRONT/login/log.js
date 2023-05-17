@@ -20,13 +20,11 @@ async function prijaviSE()
         })
         if(res.data.uspesnost)
         {
-            console.log(res.data.id);
             localStorage.setItem("id",res.data.id);
             location.href="/";
         }
         else
         {
-            console.log(res.data.message);
             if(res.data.message === "404 not found")
             {
                 document.getElementById("tika spic").innerHTML="Pogresan Email/Ime i Prezime ili Password";

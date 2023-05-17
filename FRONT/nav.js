@@ -18,28 +18,27 @@ let nav=`
     </div>
 
     <div class="nav-links">
-    <a class="navbar" id="pocetna" href="../index.html"  >Početna</a>
-    <a class="navbar" id="lekcije" href="../lekcije/lekcije.html">Lekcije</a>
-    <a class="navbar" id="odeljenja" href="../odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>
-    <a class="navbar" id="mojeLekcije" href="../moje-lekcije/moje-lekvije.html" style="display: none;">Moje lekcije</a>
-    <a class="navbar" id="PrijaviSE" href="../login/log.html" >Prijavi se</a>
-    <div class="navImeDiv" id="navIme"  style="display: none;"><div class="ImePrezimeDugme" id="imePrezime" onclick="odjaviDiv()"><img src="../slike/ucenik.png" class="korisnik" /></div></div>
-    <a href="../postignuca/postignuca.html" id="postignucaMob" style="display: none;"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
-    <div class="navOdjavi" id="odjaviMob" onclick="odjaviMe()" style="display: none;> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
-</div>
+        <a class="navbar " id="pocetna" href="../index.html"  >Početna</a>
+        <a class="navbar" id="lekcije" href="../lekcije/lekcije.html">Lekcije</a>
+        <a class="navbar" id="odeljenja" href="../odeljenje-lista/lista.html" style="display: none;" >Odeljenja</a>
+        <a class="navbar" id="mojeLekcije" href="../moje-lekcije/moje-lekvije.html" style="display: none;">Moje lekcije</a>
+        <a class="navbar" id="PrijaviSE" href="../login/log.html" >Prijavi se</a>
+        <div class="navImeDiv" id="navIme"  style="display: none;"><div class="ImePrezimeDugme" id="imePrezime" onclick="odjaviDiv()"><img src="../slike/ucenik.png" class="korisnik" /></div></div>
+        <a href="../postignuca/postignuca.html" id="postignucaMob" style="display: none;"><div class="navOdjavi"><p>POSTIGNUCA</p></div></a>
+        <div class="navOdjavi" id="odjaviMob" onclick="odjaviMe()" style="display: none;"> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
+    </div>
 
 
     <div class="divOdjaviSE" id="odjaviMe" style="display:none;">
         <div class="divSpic">  <img src="../slike/spic.png" class="spic"/> </div>
           <div class="odjavise"> 
-          <a id="postignucaLink" href="../postignuca/postignuca.html" ><div class="odjaviDugme" id="postignuca" style="display: none;"><p>POSTIGNUCA</p></div></a>
-            <div class="odjaviDugme" onclick="odjaviMe()"> <img src="../slike/logOut.png" class="odjavi" /> <p>Odjavi se</p> </div>
+            <a id="postignucaLink" href="../postignuca/postignuca.html" ><div class="odjaviDugme" id="postignuca" style="display: none;"><p>POSTIGNUCA</p></div></a>
+            <div class="odjaviDugme" onclick="odjaviMe()"><img src="../slike/logOut.png" class="odjavi" /><p>Odjavi se</p></div>
           </div>
       </div>
     </div>
 </div>
 ${body}`
-
 
 try
 { 
@@ -59,7 +58,6 @@ let id=localStorage.getItem("id");
 
 async function test()
 {
-    console.log(1);
     if(id!==null)
     {
         document.getElementById("PrijaviSE").style.display="none";
@@ -82,23 +80,17 @@ async function test()
         })
 
         let res=await axios.get(LINK+"/api/getOne/"+id);
-        console.log(res);
         if(res.data.uspesnost)
         {
             let user=res.data.user;
             document.getElementById("imePrezime").innerHTML+=user.imeIprezime;
-
-            console.log(user.tip===1);
             if(user.tip===0)
             {
                 document.getElementById("odeljenja").style.display="block"
                 document.getElementById("mojeLekcije").style.display="block"
-                document.getElementById("oNama").style.display="none"
             }
             else if(user.tip===1)
             {
-
-                document.getElementById("oNama").style.display="none"
                 document.getElementById("postignuca").style.display="block"
                 document.getElementById("postignucaMob").style.display="block"
                 document.getElementById("postignucaMob").href+="?"+user._id;
@@ -118,13 +110,11 @@ function odjaviDiv()
     {
         if(provera===0)
         {
-            console.log(2);
             document.getElementById("odjaviMe").style.display="block";
             provera=1;
         }
         else if(provera===1)
         {
-            console.log(3);
             document.getElementById("odjaviMe").style.display="none";
 
             provera=0;
@@ -135,5 +125,5 @@ function odjaviDiv()
 function odjaviMe(){
     localStorage.removeItem("id");
     location.reload();
-    location.href="/"
+    location.href="/";
 }

@@ -19,9 +19,7 @@ async function ucitajLekcije()
                     let res2= await axios.get(LINK+"/api/getOne/"+idProf)
                     if(res2.data.uspesnost)
                     {
-                        console.log(5)
                         let prof=res2.data.user.imeIprezime;
-                        console.log(prof)
                 
                         div+=`
                             <div class="kartica ${(i%2==0)?"levo":"desno"}">
@@ -41,8 +39,16 @@ async function ucitajLekcije()
                         
 
                     }  
-                    document.getElementById("lekcijeDiv").innerHTML=div;
-            }  } 
+                 
+            } 
+            if(div==="")
+            {
+               div=`<div class="poruka">
+                <h1>JOS NEMA UNETIH LEKCIJA</h1>
+                </div>`
+              
+            }
+            document.getElementById("lekcijeDiv").innerHTML=div;  } 
              else
             {
                 for(let i=0;i<lekcije.length;i++)
@@ -51,9 +57,7 @@ async function ucitajLekcije()
                     let res2= await axios.get(LINK+"/api/getOne/"+idProf)
                     if(res2.data.uspesnost)
                     {
-                        console.log(5)
                         let prof=res2.data.user.imeIprezime;
-                        console.log(prof)
                    
                         div+=`
                             <div class="kartica ${(i%2==0)?"levo":"desno"}">
@@ -74,6 +78,13 @@ async function ucitajLekcije()
     
                     }  
              
+                }
+                if(div==="")
+                {
+                   div=`<div class="poruka">
+                    <h1>JOS NEMA UNETIH LEKCIJA</h1>
+                    </div>`
+                  
                 }
                 document.getElementById("lekcijeDiv").innerHTML=div;
             }

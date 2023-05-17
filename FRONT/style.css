@@ -19,7 +19,9 @@ body{
 a:hover{
   text-decoration: none;
 }
-
+html{
+  height: max-content;
+}
 /* ------------------------------------SCROL----------------------- */
 ::-webkit-scrollbar {
   width: 10px;
@@ -323,6 +325,7 @@ a:hover{
 
 #footer{
   bottom: 0;
+
   width: 100%;
   position:relative;
   margin-top: 40px;

@@ -4,7 +4,6 @@ async function izmeniUcenika(){
 
     let id=location.search.substring(1)
     let res=await axios.get(LINK+"/api/getOne/"+id)
-    console.log(res);
 
     if(res.data.uspesnost)
     {
@@ -22,13 +21,10 @@ async function izmeniUcenikaNone(){
 async function ucitaj()
 {
     let id = location.search.substring(1);
-    console.log(id);
     let res = await axios.get(LINK+"/api/getOne/"+id);
     let ucenik = res.data.user;
     if(res.data.uspesnost)
     {
-        
-        console.log(ucenik);
         document.getElementById("text-h").innerHTML=ucenik.imeIprezime;
         document.getElementById("bodovi").innerHTML=ucenik.brojBodova;
 
@@ -75,10 +71,8 @@ async function UcenikIzmeni()
         imeIprezime:ime,
         password:sifra
     }
-    console.log(Ucenik)
 
     var res=await axios.put(LINK + "/api/ucenik/podaci/"+id,Ucenik);
-        console.log(res) 
          
         if(res.data.uspesnost)
         {

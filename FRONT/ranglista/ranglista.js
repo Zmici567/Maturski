@@ -4,7 +4,6 @@ async function UcitajRangLitu(){
     if(res.data.uspesnost)
     {
         let ucenici=res.data.users;
-        console.log(ucenici);
         document.getElementById("1mestoN").innerHTML=ucenici[0].imeIprezime;
         document.getElementById("1mestoB").innerHTML=ucenici[0].brojBodova;
 

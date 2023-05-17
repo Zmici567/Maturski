@@ -59,7 +59,6 @@ let id=localStorage.getItem("id");
 
 async function test()
 {
-    console.log(1);
     if(id!==null)
     {
         document.getElementById("PrijaviSE").style.display="none";
@@ -82,13 +81,11 @@ async function test()
         })
 
         let res=await axios.get(LINK+"/api/getOne/"+id);
-        console.log(res);
         if(res.data.uspesnost)
         {
             let user=res.data.user;
             document.getElementById("imePrezime").innerHTML+=user.imeIprezime;
 
-            console.log(user.tip===1);
             if(user.tip===0)
             {
                 document.getElementById("odeljenja").style.display="block"
@@ -118,13 +115,11 @@ function odjaviDiv()
     {
         if(provera===0)
         {
-            console.log(2);
             document.getElementById("odjaviMe").style.display="block";
             provera=1;
         }
         else if(provera===1)
         {
-            console.log(3);
             document.getElementById("odjaviMe").style.display="none";
 
             provera=0;

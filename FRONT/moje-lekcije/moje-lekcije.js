@@ -18,7 +18,6 @@ async function ucitajMojeLekcije()
             let res2= await axios.get(LINK+"/api/getOne/"+idProf)
             if(res2.data.uspesnost)
             {
-                console.log(5)
                 
                if(mojId===idProf)
                {
@@ -31,19 +30,27 @@ async function ucitajMojeLekcije()
                             <div class="naslov">
                                 <h1 >${lekcije[i].naziv}</h1>
                             </div>
-                            <div class="ikonice">
+                            <div class="ikonice"  onclick="obrisiLekciju('${lekcije[i]._id}')">
                                 <img src="../slike/kanta.png" class="ikonica2" style="height: 40px;" />
                             </div>
                         </div>
                     </div>`
                }
-           
-                
-                
-
             }   
         }
         document.getElementById("MojLekcijeDiv").innerHTML=div;
     } 
        
 } 
+
+async function obrisiLekciju(id)
+{
+    if(confirm("Da li ste sigurni da zelite da obrisete Lekciju?")===true)
+    {
+        let res = await axios.delete(LINK+"/api/lekcija/"+id);
+        if(res.data.uspesnost)
+        {
+            await ucitajMojeLekcije();
+        }
+    }
+}

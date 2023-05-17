@@ -16,12 +16,10 @@ async function ucitaj()
 {
     let div=``;
     let res= await axios.get(LINK+"/api/odeljenja/"+localStorage.getItem("id"));
-    console.log(res);
 
     if(res.data.uspesnost)
     {
         let odeljenja=res.data.odeljenja;
-        console.log(odeljenja);
         odeljenja.forEach(odeljenje => {
             div+=`
         <a href="../odeljenje/odeljenje.html?${odeljenje._id}">

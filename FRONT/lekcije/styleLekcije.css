@@ -1,7 +1,7 @@
-body{
+/* body{
     display: block;
     width: 100%;
-}
+} */
 .pozadina{
     position: fixed;
     width: 100%;
@@ -16,6 +16,15 @@ body{
     }  
 .razmal{
     height: 100px;
+}
+.poruka{
+    background-color: #fbf4e9bf;
+    color: #6ECB63;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
 }
 .kartica{
     background-color: rgba(255, 255, 255, 0.6);

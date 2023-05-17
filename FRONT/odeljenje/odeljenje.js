@@ -15,7 +15,6 @@ async function izmeniDiv(){
 
     let id=location.search.substring(1)
     let res=await axios.get(LINK+"/api/odeljenje/"+id)
-    console.log(res);
 
     if(res.data.uspesnost)
     {
@@ -34,7 +33,6 @@ async function izmeniNone(){
 async function ucitajOdeljenje(){
     let id=location.search.substring(1)
     let res=await axios.get(LINK+"/api/odeljenje/"+id)
-    console.log(res);
 
     if(res.data.uspesnost)
     {
@@ -52,7 +50,6 @@ async function ucitajOdeljenje(){
             if(res.data.uspesnost)
             {
                 let ucenik=res.data.user;
-                console.log(ucenik)
                 div+=`
                 <div class="ucenik"> 
                     <p>${ucenik.imeIprezime}</p> 
@@ -98,9 +95,7 @@ async function dodajUcenika()
                 password:(String)(document.getElementById("sifraUcenika").value),
                 idOdeljenja:id
             }
-            console.log("ucitaj ucenika")
             var res=await axios.post(LINK+"/api/Ucenik",Ucenik)
-            console.log(res)
             if(res.data.uspesnost)
             {
                 document.getElementById("divDodajUcenika").style.display="none";
@@ -157,9 +152,7 @@ async function izmeniOdeljenje()
             skola:skola,
             naziv:odeljenje
         }
-        console.log("izmeni odeljenje")
         var res=await axios.put(LINK + "/api/odeljenje/"+id,Odeljenje);
-        console.log(res)  
         if(res.data.uspesnost)
         {
             document.getElementById("izmeniDiv").style.display="none";
