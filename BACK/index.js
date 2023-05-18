@@ -6,7 +6,7 @@ const path = require("path");
 const upload = multer({ 
     dest: '../FRONT/SLIKE/',
     fileFilter:function(req,file,calback){
-        let ext = path.extname(file.originalname);
+        let ext = path.extname(file.originalname).toLowerCase();
         if(ext != '.jpg' && ext!='.png' && ext!='.jpeg' )
         {
             return calback(new Error('Only pictures are allowed'))
