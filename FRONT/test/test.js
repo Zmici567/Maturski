@@ -72,8 +72,8 @@ function odgovor(o)
         document.getElementById("TN").innerHTML="Netačan odgovor!!!";
     }
 
-    document.getElementById("teraj").style.display="block";
-    setTimeout(terajDalje,5000);
+    document.getElementById("teraj").style.display="flex";
+    setTimeout(terajDalje,1000);
 }
 
 async function terajDalje()

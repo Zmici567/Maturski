@@ -105,6 +105,7 @@
     padding: 40px 5% 40px 5%;
     text-align: center;
     color: #6ECB63;
+    font-size: 18px;
 }
 
 .onama h1{
@@ -115,7 +116,7 @@
 .onama-text{
   background-color: #e8fadea0;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .tim{
