@@ -1,4 +1,6 @@
 const LEKCIJA= require("../SCHEMAS/lekcija");
+const USER = require("../SCHEMAS/user");
+const fs = require("fs");
 
 async function get(req,res)
 {
@@ -45,11 +47,35 @@ async function del(req,res)
     {
         let id = req.params.id;
 
+        let ucenici = await USER.find({tip:1});
+        console.log(ucenici);
+        for(let i=0;i<ucenici.length;i++)
+        {
+            for(let j=0;j<ucenici[i].uradjeneLekcije.length;j++)
+            {
+                console.log(ucenici[i].uradjeneLekcije[j].idLekcije)
+                if(ucenici[i].uradjeneLekcije[j].idLekcije == id)
+                {
+                    ucenici[i].uradjeneLekcije.splice(j,1);
+                }
+            }
+            await ucenici[i].save();
+        }
+
+        let slika = (await LEKCIJA.findById(id)).slika;
+
+        fs.unlink("../FRONT/slike/"+slika, function (err) {
+            if (err) {
+              console.error(err);
+            } else {
+              console.log("File removed:", slika);
+            }
+          });
+
         let deleted = await LEKCIJA.deleteOne({_id:id});
 
         res.json({
             uspesnost:true,
-            deleted:deleted
         })
     }
     catch(err)

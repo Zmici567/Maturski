@@ -8,7 +8,7 @@ let redBroj=0;
 let poeni=0;
 function ucitaj()
 {
-    pitanje.innerHTML=pitanja[redBroj].tekst;
+    pitanje.innerHTML=(redBroj+1)+". "+pitanja[redBroj].tekst;
     odgovor1.innerHTML=pitanja[redBroj].odgovori[0];
     odgovor2.innerHTML=pitanja[redBroj].odgovori[1];
     odgovor3.innerHTML=pitanja[redBroj].odgovori[2];

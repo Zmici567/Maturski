@@ -5,26 +5,39 @@ async function postUcenik(req,res)
 {
     try
     {
-        let ucenik = new USER({
-            tip:1,
-            imeIprezime:req.body.imeIprezime,
-            password:req.body.password,
-            idOdeljenja:req.body.idOdeljenja,
-            brojBodova:0,
-            uradjeneLekcije:[]
-        })
-        let saved = await ucenik.save();
-        let idOdeljenja = req.body.idOdeljenja;
-        let id = saved._id;
+        let ucenici = await USER.find({tip:1, password:req.body.password});
 
-        let odeljenje=await ODELJENJE.findById(idOdeljenja);
-        odeljenje.idUcenika.push(id);
-        await odeljenje.save();
-
-        res.json({
-            uspesnost:true,
-            sacuvano:saved
-        })
+        if(ucenici.length>0)
+        {
+            res.json({
+                uspesnost:false,
+                message:"Vec postoji ucenik sa ovom sifrom!!!"
+            })
+        }
+        else
+        {
+            let ucenik = new USER({
+                tip:1,
+                imeIprezime:req.body.imeIprezime,
+                password:req.body.password,
+                idOdeljenja:req.body.idOdeljenja,
+                brojBodova:0,
+                uradjeneLekcije:[]
+            })
+            let saved = await ucenik.save();
+            let idOdeljenja = req.body.idOdeljenja;
+            let id = saved._id;
+    
+            let odeljenje=await ODELJENJE.findById(idOdeljenja);
+            odeljenje.idUcenika.push(id);
+            await odeljenje.save();
+    
+            res.json({
+                uspesnost:true,
+                sacuvano:saved
+            })
+        }
+        
     }
     catch(err)
     {
@@ -42,17 +55,29 @@ async function postProfesor(req,res)
         let kod=req.body.kod;
         if(kod==="12345")
         {
-            let ucenik = new USER({
-                tip:0,
-                imeIprezime:req.body.imeIprezime,
-                password:req.body.password,
-                email:req.body.email,
-            })
-            let saved = await ucenik.save();
-            res.json({
-                uspesnost:true,
-                sacuvano:saved
-            })
+            let profesori = await USER.find({email:req.body.email});
+            if(profesori.length>0)
+            {
+                res.json({
+                    uspesnost:false,
+                    message:"Vec postoji korisnik sa ovim email-om"
+                })
+            }
+            else
+            {
+                let ucenik = new USER({
+                    tip:0,
+                    imeIprezime:req.body.imeIprezime,
+                    password:req.body.password,
+                    email:req.body.email,
+                })
+                let saved = await ucenik.save();
+                res.json({
+                    uspesnost:true,
+                    sacuvano:saved
+                })
+            }
+            
         }
         else
         {

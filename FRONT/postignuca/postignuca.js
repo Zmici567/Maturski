@@ -28,12 +28,17 @@ async function ucitaj()
         document.getElementById("text-h").innerHTML=ucenik.imeIprezime;
         document.getElementById("bodovi").innerHTML=ucenik.brojBodova;
 
+        //console.log(ucenik);
+
         let div=``;
         for(let i = 0; i<ucenik.uradjeneLekcije.length;i++ )
         {
-            let res = await axios.get(LINK+"/api/lekcija/"+ucenik.uradjeneLekcije[i].idLekcije);
+            console.log()
+            res = await axios.get(LINK+"/api/lekcija/"+ucenik.uradjeneLekcije[i].idLekcije);
+            console.log(res);
             if(res.data.uspesnost)
             {
+                
                 let naziv=res.data.lekcije.naziv;
 
                 div+=`<div class="lekcija"> <p>${naziv}</p> <div class="bodovi"><p class="b-text">Bodovi:</p><p>${ucenik.uradjeneLekcije[i].bodovi}</p></div> </div>`

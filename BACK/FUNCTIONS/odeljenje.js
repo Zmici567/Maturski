@@ -1,4 +1,5 @@
 const ODELJENJE = require("../SCHEMAS/odeljenje");
+const USER = require("../SCHEMAS/user");
 
 async function get(req,res)
 {
@@ -68,6 +69,7 @@ async function del(req,res)
 {
     try
     {
+        await USER.deleteMany({idOdeljenja:req.params.id})
         await ODELJENJE.deleteOne({_id:req.params.id})
         res.json({uspesnost:true})
     }
