@@ -185,6 +185,12 @@
    .log h3{
     font-size: 25px;
    }
+   .kraj, .tacni-netacno{
+    width: 80%;
+   }
+   .kraj-testa, .sledece-pitanje{
+    width: 99%;
+   }
 
 }
 
