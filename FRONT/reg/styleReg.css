@@ -119,12 +119,14 @@
 
 .reg{
     margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: #6ECB63;
+
 }
 .reg a{
     color: #6ECB63;
@@ -159,7 +161,6 @@
 { 
    .log{
       width: 90%;
-      height: 600px;
    }
    .inputGroup{
     width: 90%;
